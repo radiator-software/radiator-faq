@@ -1,16 +1,16 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            FAQ test Jekyll Gitbook
+longtitle:        A small test for creating FAQ site with Jekyll Gitbook
+author:           Jani Lahti
+email:            jani.lahti@iki.fi
 description: >
-  Build Jekyll site with the GitBook style.
+  Let's try to build a Jekyll FAQ site with the GitBook style.
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://janilahti.github.io'
+baseurl:          '/faq'
 rss:              RSS
 
 toc:
