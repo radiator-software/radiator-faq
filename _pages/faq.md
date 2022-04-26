@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: post
 title: FAQ Title
 author: Some Author
 date: 2022-12-23
@@ -8,7 +8,7 @@ category: Radiator
 
 Updated: {{ site.time | date: "%-m-%d-%Y" }} or logn string {{ site.time | date_to_long_string }}
 
-## General
+## General questions
 
 ### What is the best RADIUS server?
 

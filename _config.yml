@@ -49,6 +49,6 @@ destination:      ./_site
 incremental:      false
 regenerate:       true
 
-plugins:
-  - jekyll-feed
-  - jemoji
+#plugins:
+#  - jekyll-feed
+#  - jemoji
