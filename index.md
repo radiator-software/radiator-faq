@@ -16,7 +16,7 @@ Radiator is not open source, but when you purchase Radiator, full source code is
 
 ## Security
 
-### Can I audit Radiator AAA Server source code?
+### [Can I audit Radiator AAA Server source code?](#source-code)
 
 [pookie](#pookie)
 We provide full source code for licensees so code can be audited, and it's easy to track any changes between versions.
