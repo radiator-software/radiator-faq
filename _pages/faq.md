@@ -1,8 +1,12 @@
 ---
 layout: home
+title: FAQ Title
+author: Some Author
+date: 2022-12-23
+category: Radiator
 ---
 
-Updated: {{ page.date | date: "%-m-%d-%Y" }} or site? {{ site.time | date_to_long_string }}
+Updated: {{ site.time | date: "%-m-%d-%Y" }} or logn string {{ site.time | date_to_long_string }}
 
 ## General
 
@@ -20,7 +24,7 @@ Radiator is not open source, but when you purchase Radiator, full source code is
 
 We provide full source code for licensees so code can be audited, and it's easy to track any changes between versions.
 
-### How do I submit security issues / questions?
+### [How do I submit security issues / questions?](#submit-security-issues)
 
 All security related issues concerning Radiator Software products or services should be reported to the following email address:
 
