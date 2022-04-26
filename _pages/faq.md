@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: home
 title: FAQ Title
 author: Some Author
 date: 2022-12-23
