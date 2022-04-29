@@ -105,4 +105,4 @@ Full list can be seen from our technical documentation, but short listing is her
 
 ### [What platforms are supported by Radiator?](#what-platforms-are-supported-by-radiator)
 
-Radiator supports all **the most used operating systems** (Unix, Linux, Windows and Mac OS). For a complete list for different operating systems and for example Linux distributions, please see our supported platforms page.
+Radiator supports all **the most used operating systems** (Unix, Linux, Windows and Mac OS). For a complete list for different operating systems and for example Linux distributions, please see [https://radiatorsoftware.com/supported-platforms/]().
