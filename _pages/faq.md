@@ -17,4 +17,4 @@ long with build time {{ site.time | date_to_long_string }}
 
 ### [What is the best RADIUS server?](#best-radius-server)
 
-From our point of view, Radiator AAA Server is the best choice for RADIUS, Diameter and other AAA server needs. Because of the flexibility of Radiator, our customers call it the Swiss Army knife of RADIUS servers. More info on Radiator can be found from Radiator product site: https://radiatorsoftware.com/products/radiator/
+From our point of view, Radiator AAA Server is the best choice for **RADIUS**, **Diameter** and other **AAA** server needs. Because of the flexibility of Radiator, our customers call it the *Swiss Army knife of RADIUS servers*. More info on Radiator can be found from Radiator product site [https://radiatorsoftware.com/products/radiator/]()

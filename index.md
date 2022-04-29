@@ -1,11 +1,11 @@
 ---
 layout: home
-title: Radiator Frequently Asked Questions
+title: Radiator AAA Server Frequently Asked Questions
 ---
 
 Updated: {{ site.time | date: "%-d-%m-%Y" }}
 
-This is a FAQ site and main page there'll be some jaada-jaada content.
+This is a FAQ site and main page there'll be some main page content.
 
 # Content
 
@@ -13,4 +13,4 @@ This is a FAQ site and main page there'll be some jaada-jaada content.
 
 ### Content
 
-[FAQ is here](faq).
+[Jump to FAQ](faq)!

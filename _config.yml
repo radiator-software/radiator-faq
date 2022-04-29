@@ -1,17 +1,16 @@
 # Configurations
 title:            About FAQ
-longtitle:        A small test for creating FAQ site with Jekyll Gitbook
+longtitle:        Radiator AAA server Frequently Asked Questions
 author:           Jani Lahti
 email:            jani.lahti@iki.fi
 description: >
-  Let's try to build a FAQ site with the GitBook style using Jekyll.
+  Radiator AAA server Frequently Asked Questions, Radiator RADIUS Server
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://janilahti.github.io'
-baseurl:          '/faq'
-#baseurl:          ''
+url:              'https://faq.radiatorsoftware.com'
+baseurl:          ''
 
 toc:
   enabled: true
