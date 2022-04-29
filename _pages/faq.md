@@ -1,16 +1,21 @@
 ---
 layout: home
-xxxtitle: FAQ Title
-author: Some Author
-date: 2022-12-23
-xxxcategory: Radiator
+title: Frequently Asked Questions
 ---
 
-Updated: {{ site.time | date: "%-m-%d-%Y" }} or logn string {{ site.time | date_to_long_string }}
+Updated: {{ site.time | date: "%-d-%m-%Y" }}
+{% comment %}
+short with frontmatter "date: 2021-12-23" {{ page.date | date: "%-d-%m-%Y" }}
+long with build time {{ site.time | date_to_long_string }}
+{% endcomment %}
+
+- TOC
+{:toc}
+
 
 ## General questions
 
-### What is the best RADIUS server?
+### [What is the best RADIUS server?}(#best-radius-server)
 
 From our point of view, Radiator AAA Server is the best choice for RADIUS, Diameter and other AAA server needs. Because of the flexibility of Radiator, our customers call it the Swiss Army knife of RADIUS servers. More info on Radiator can be found from Radiator product site: https://radiatorsoftware.com/products/radiator/
 
@@ -24,7 +29,7 @@ Radiator is not open source, but when you purchase Radiator, full source code is
 
 We provide full source code for licensees so code can be audited, and it's easy to track any changes between versions.
 
-### [How do I submit security issues / questions?](#submit-security-issues)
+### How do I submit security issues / questions?
 
 All security related issues concerning Radiator Software products or services should be reported to the following email address:
 

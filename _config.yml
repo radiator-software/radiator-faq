@@ -1,21 +1,21 @@
 # Configurations
-title:            FAQ test Jekyll Gitbook
+title:            About FAQ
 longtitle:        A small test for creating FAQ site with Jekyll Gitbook
 author:           Jani Lahti
 email:            jani.lahti@iki.fi
 description: >
-  Let's try to build a Jekyll FAQ site with the GitBook style.
+  Let's try to build a FAQ site with the GitBook style using Jekyll.
 
 version:          1.0
 gitbook_version:  3.2.3
 
 url:              'https://janilahti.github.io'
-baseurl:          '/faq'
-rss:              RSS
+#baseurl:          '/faq'
+baseurl:          ''
 
 toc:
   enabled: true
-  h_min: 2
+  h_min: 1
   h_max: 3
 
 # markdown render engine.
@@ -43,7 +43,14 @@ exclude:
 collections:
   pages:
     output: true
-    permalink: /:collection/:path/
+    #permalink: /:collection/:path/
+    permalink: /:path/
+
+extra_css:
+  - stuff/rad.css
+
+# extra_header_js:
+# extra_footer_js:
 
 destination:      ./_site
 incremental:      false
