@@ -106,3 +106,12 @@ Full list can be seen from our technical documentation, but short listing is her
 ### [What platforms are supported by Radiator?](#what-platforms-are-supported-by-radiator)
 
 Radiator supports all **the most used operating systems** (Unix, Linux, Windows and Mac OS). For a complete list for different operating systems and for example Linux distributions, please see [https://radiatorsoftware.com/supported-platforms/]().
+
+## Monitoring
+### [How SNMP is supported in Radiator?](#monitoring-snmp)
+Radiator includes SNMP agent support. The agent supports SNMP versions 1 and 2c and all the SNMP objects described in the following RFCs:
+
+- RFC2619 - RADIUS Authentication Server MIB
+- RFC2621 - RADIUS Accounting Server MIB
+- RFC4669 - RADIUS Authentication Server MIB for IPv6
+- RFC4671 - RADIUS Accounting Server MIB for IPv6
