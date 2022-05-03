@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Radiator AAA Server Frequently Asked Questions | Radiator AAA Server Frequently Asked Questions, Radiator RADIUS Server FAQ</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Radiator AAA Server Frequently Asked Questions" />
+<meta name="author" content="Radiator Software Oy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Radiator AAA Server Frequently Asked Questions, Radiator RADIUS Server FAQ" />
+<meta property="og:description" content="Radiator AAA Server Frequently Asked Questions, Radiator RADIUS Server FAQ" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Radiator AAA Server Frequently Asked Questions" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Radiator AAA Server Frequently Asked Questions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Radiator Software Oy"},"description":"Radiator AAA Server Frequently Asked Questions, Radiator RADIUS Server FAQ","headline":"Radiator AAA Server Frequently Asked Questions","name":"Radiator AAA Server Frequently Asked Questions","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Radiator AAA Server Frequently Asked Questions" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Radiator AAA Server Frequently Asked Questions</a></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home"><div id="radiator-links" style="font-weight: bolder;">
+  <p><a href="https://radiatorsoftware.com/">Radiator Software ↗</a>     
+<a href="https://radiatorsoftware.com/products/radiator/">Radiator AAA Server ↗</a></p>
+</div>
+
+<p>Updated: 2022-05-03</p>
+
+<div id="toc-cont">
+<ul id="markdown-toc">
+  <li><a href="#general-questions" id="markdown-toc-general-questions">General questions</a>    <ul>
+      <li><a href="#what-is-the-best-radius-server" id="markdown-toc-what-is-the-best-radius-server">What is the best RADIUS server?</a></li>
+      <li><a href="#is-radiator-open-source" id="markdown-toc-is-radiator-open-source">Is Radiator open source?</a></li>
+      <li><a href="#how-much-does-radiator-cost" id="markdown-toc-how-much-does-radiator-cost">How much does Radiator cost?</a></li>
+      <li><a href="#who-is-using-radiator" id="markdown-toc-who-is-using-radiator">Who is using Radiator?</a></li>
+      <li><a href="#references" id="markdown-toc-references">References</a></li>
+      <li><a href="#is-there-an-online-demo-available" id="markdown-toc-is-there-an-online-demo-available">Is there an online demo available?</a></li>
+      <li><a href="#where-is-the-radiator-team-based" id="markdown-toc-where-is-the-radiator-team-based">Where is the Radiator team based?</a></li>
+      <li><a href="#who-is-behind-radiator" id="markdown-toc-who-is-behind-radiator">Who is behind Radiator?</a></li>
+      <li><a href="#who-is-the-manufacturer-for-radiator" id="markdown-toc-who-is-the-manufacturer-for-radiator">Who is the manufacturer for Radiator?</a></li>
+    </ul>
+  </li>
+  <li><a href="#licencing" id="markdown-toc-licencing">Licencing</a>    <ul>
+      <li><a href="#how-radiator-licencing-works" id="markdown-toc-how-radiator-licencing-works">How Radiator licencing works?</a></li>
+      <li><a href="#is-there-a-demo-version-of-radiator" id="markdown-toc-is-there-a-demo-version-of-radiator">Is there a demo version of Radiator?</a></li>
+      <li><a href="#what-is-the-difference-between-the-fully-licensed-and-demo-versions" id="markdown-toc-what-is-the-difference-between-the-fully-licensed-and-demo-versions">What is the difference between the fully licensed and demo versions?</a></li>
+    </ul>
+  </li>
+  <li><a href="#features" id="markdown-toc-features">Features</a>    <ul>
+      <li><a href="#which-rfcs-protocols-and-authentication-methods-are-supported-by-radiator" id="markdown-toc-which-rfcs-protocols-and-authentication-methods-are-supported-by-radiator">Which RFCs, protocols and authentication methods are supported by Radiator?</a></li>
+      <li><a href="#what-platforms-are-supported-by-radiator" id="markdown-toc-what-platforms-are-supported-by-radiator">What platforms are supported by Radiator?</a></li>
+    </ul>
+  </li>
+  <li><a href="#installation" id="markdown-toc-installation">Installation</a>    <ul>
+      <li><a href="#can-i-run-radiator-in-a-docker-container" id="markdown-toc-can-i-run-radiator-in-a-docker-container">Can I run Radiator in a Docker container?</a></li>
+    </ul>
+  </li>
+  <li><a href="#deployment" id="markdown-toc-deployment">Deployment</a>    <ul>
+      <li><a href="#does-radiator-offer-repositories" id="markdown-toc-does-radiator-offer-repositories">Does Radiator offer repositories?</a></li>
+      <li><a href="#how-do-i-deploy-radiator" id="markdown-toc-how-do-i-deploy-radiator">How do I deploy Radiator?</a></li>
+    </ul>
+  </li>
+  <li><a href="#management" id="markdown-toc-management">Management</a>    <ul>
+      <li><a href="#how-do-i-manage-radiator-instances-on-multiple-hosts" id="markdown-toc-how-do-i-manage-radiator-instances-on-multiple-hosts">How do I manage Radiator instances on multiple hosts?</a></li>
+      <li><a href="#how-do-i-manage-radiator-instances-on-a-single-host" id="markdown-toc-how-do-i-manage-radiator-instances-on-a-single-host">How do I manage Radiator instances on a single host?</a></li>
+      <li><a href="#can-i-use-ansible" id="markdown-toc-can-i-use-ansible">Can I use Ansible?</a></li>
+    </ul>
+  </li>
+  <li><a href="#monitoring" id="markdown-toc-monitoring">Monitoring</a>    <ul>
+      <li><a href="#how-snmp-is-supported-in-radiator" id="markdown-toc-how-snmp-is-supported-in-radiator">How SNMP is supported in Radiator?</a></li>
+    </ul>
+  </li>
+  <li><a href="#support" id="markdown-toc-support">Support</a>    <ul>
+      <li><a href="#how-can-i-contact-radiator-support" id="markdown-toc-how-can-i-contact-radiator-support">How can I contact Radiator support?</a></li>
+      <li><a href="#what-support-options-are-available" id="markdown-toc-what-support-options-are-available">What support options are available?</a></li>
+      <li><a href="#how-to-submit-feature-requests" id="markdown-toc-how-to-submit-feature-requests">How to submit feature requests?</a></li>
+      <li><a href="#how-do-i-submit-bug-reports" id="markdown-toc-how-do-i-submit-bug-reports">How do I submit bug reports?</a></li>
+    </ul>
+  </li>
+  <li><a href="#security" id="markdown-toc-security">Security</a>    <ul>
+      <li><a href="#can-i-audit-radiator-aaa-server-source-code" id="markdown-toc-can-i-audit-radiator-aaa-server-source-code">Can I audit Radiator AAA Server source code?</a></li>
+      <li><a href="#how-do-i-submit-security-issues--questions" id="markdown-toc-how-do-i-submit-security-issues--questions">How do I submit security issues / questions?</a></li>
+      <li><a href="#how-can-i-validate-the-software-downloads" id="markdown-toc-how-can-i-validate-the-software-downloads">How can I validate the software downloads?</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+
+<h2 id="general-questions"><a href="#general">General questions</a></h2>
+
+<h3 id="what-is-the-best-radius-server"><a href="#best-radius-server">What is the best RADIUS server?</a></h3>
+
+<p>From our point of view, Radiator AAA Server is the best choice for <strong>RADIUS</strong>, <strong>Diameter</strong> and other <strong>AAA</strong> server needs. Because of the flexibility of Radiator, our customers call it the <em>Swiss Army knife of RADIUS servers</em>. More info on Radiator can be found from Radiator product site <a href="">https://radiatorsoftware.com/products/radiator/</a></p>
+
+<h3 id="is-radiator-open-source"><a href="#is-radiator-open-source">Is Radiator open source?</a></h3>
+
+<p>Radiator is not open source, but when you purchase Radiator, full source code is always supplied.</p>
+
+<h3 id="how-much-does-radiator-cost"><a href="#how-much-radiator-cost">How much does Radiator cost?</a></h3>
+
+<p>You can see selected Radiator licence prices at <a href="">https://radiatorsoftware.com/pricelist/</a>. Pricing for the Radiator add-on modules is provided upon request by contacting Radiator sales.</p>
+
+<h3 id="who-is-using-radiator"><a href="#who-is-using-radiator">Who is using Radiator?</a></h3>
+
+<p>Radiator AAA server is used for user and network authentication by a huge range of different organisations: educational institutions, cities, governmental organisations, ISPs and telecom companies, managed service providers, utility companies, and private businesses in various fields such as hospitality, finance, defence and medical industries.</p>
+
+<h3 id="references"><a href="#references">References</a></h3>
+
+<p>Radiator has a large and active worldwide customer base. Please see our website for customer references: <a href="">https://radiatorsoftware.com/customers/</a></p>
+
+<h3 id="is-there-an-online-demo-available"><a href="#online-demo">Is there an online demo available?</a></h3>
+
+<p>There is a Radiator Demo Cloud online demo - you can book a timeslot to go through typical Radiator use cases (or possibly your own use case) with Radiator experts.</p>
+
+<h3 id="where-is-the-radiator-team-based"><a href="#radiator-team-based">Where is the Radiator team based?</a></h3>
+
+<p>The Radiator team is based in Finland, where development and sales are done. At the same time, we also have a worldwide partner network providing support and consultation.</p>
+
+<h3 id="who-is-behind-radiator"><a href="#who-is-behind-radiator">Who is behind Radiator?</a></h3>
+
+<p>Radiator was developed by Australian-based <em>Open System Consultants (OSC)</em> 1998-2013, until the Finnish team acquired OSC in 2013 and took over Radiator development and business. The resulting company is Radiator Software.</p>
+
+<h3 id="who-is-the-manufacturer-for-radiator"><a href="#manufacturer-for-radiator">Who is the manufacturer for Radiator?</a></h3>
+
+<p><em>Radiator Software Oy</em> is the sole manufacturer of Radiator AAA Server software. <em>Radiator Software</em> sells Radiator licences globally and you can buy a licence directly from the Radiator team. Radiator licences are also sold through various distribution partners all over the world.</p>
+
+<h2 id="licencing"><a href="#licencing">Licencing</a></h2>
+
+<h3 id="how-radiator-licencing-works"><a href="#how-radiator-licencing-works">How Radiator licencing works?</a></h3>
+
+<p>Radiator licencing is based on the number of servers used by the customer organisation. Radiator is available in different licence sizes starting from single server <strong>Radiator Single Pack</strong> and up to unlimited server count <strong>Radiator Enterprise Pack</strong>.</p>
+
+<p>Radiator can be extended with <strong>Radiator Carrier Pack</strong>, <strong>Radiator SIM Pack</strong>, <strong>Radiator Telco Pack</strong> and <strong>Radiator GBA/BSF Pack</strong>. Licencing for these add-on <em>Diameter modules</em> is based on the number of subscribers or alternatively concurrent sessions depending on the use case.</p>
+
+<p>Other flexible licencing options are also available. Please contact Radiator sales if you’re interested in <strong>service provider</strong> licencing, <strong>VNF</strong> licencing, <strong>white-label OEM</strong> licencing or other models.</p>
+
+<h3 id="is-there-a-demo-version-of-radiator"><a href="#demo-version-of-radiator">Is there a demo version of Radiator?</a></h3>
+
+<p>Radiator is available as an <em>evaluation version</em>. You can request a free <em>30 day evaluation licence</em> by filling out our evaluation form: <a href="">https://radiatorsoftware.com/evaluation/</a>.</p>
+
+<h3 id="what-is-the-difference-between-the-fully-licensed-and-demo-versions"><a href="#difference-between-fully-licensed-and-demo-versions">What is the difference between the fully licensed and demo versions?</a></h3>
+
+<p>Evaluation software has the <em>full functionality of Radiator</em>. The difference is that evaluation software is time limited and requires a licence key to activate, and the source code is obscured.</p>
+
+<h2 id="features"><a href="#features">Features</a></h2>
+
+<h3 id="which-rfcs-protocols-and-authentication-methods-are-supported-by-radiator"><a href="#rfcs-protocols-and-authentication-methods">Which RFCs, protocols and authentication methods are supported by Radiator?</a></h3>
+
+<p>Full list can be seen from our technical documentation, but short listing is here:</p>
+
+<ul>
+  <li>Complies with RFCs 2548, 2619, 2621, 2865, 2866, 2867, 2868, 2869, 3579, 4669, 4671, 5176, 5997</li>
+  <li>Dictionary or other applicable support for RFCs 4372, 4849, 4675, 4849, 5080, 5447, 5580, 5607, 5904, 6158, 6929, 6519, 6572, 6677, 7055, 7268, 8044</li>
+  <li>Supports RFC 6614, also known as RadSec – secure, reliable RADIUS proxying</li>
+  <li>Acts as a Diameter to RADIUS gateway for NAS authentication and accounting. Supports Diameter RFCs 3588, 6733, 4072, 4005, 7155.</li>
+  <li>Acts as a RADIUS to Diameter gateway for NAS authentication and accounting.</li>
+  <li>Supports EAP in accordance with RFC 3748</li>
+  <li>Supports EAP-MD-Challenge, EAP-OTP and EAP-GTC, RFC 3748</li>
+  <li>Supports EAP TLS, RFC 5216</li>
+  <li>Supports EAP TTLS, RFC 5281</li>
+  <li>Supports PEAP, IETF drafts and MS-PEAP</li>
+  <li>Supports EAP-MSCHAP-V2</li>
+  <li>Supports Cisco LEAP</li>
+  <li>Supports EAP-FAST, RFC 4851</li>
+  <li>Supports EAP-pwd, RFC 5931</li>
+  <li>Supports EAP-PSK, RFC 4764</li>
+  <li>Supports EAP-PAX, RFC 4746</li>
+  <li>EAP-SIM, EAP-AKA, EAP-AKA’, 3GPP AAA Server and other related features are available through Radiator SIM Pack</li>
+  <li>Acts as authentication server for IEEE 802.1X with support for IEEE 802.1AE, also known as MACsec</li>
+  <li>Supports HOTP, RFC 4226</li>
+  <li>Supports TOTP, RFC 6238, sometimes referred as Google Authenticator</li>
+  <li>RADIUS SIP Digest authentication per draft-sterman-aaa-sip-00.txt and RFC 5090</li>
+  <li>Diameter 3GPP EIR and other carrier features are available through Radiator Carrier Pack</li>
+  <li>Diameter 3GPP GBA/BSF support for VoLTE Supplementary Services and other related features are available through Radiator GBA/BSF Pack</li>
+  <li>Diameter 3GPP PCRF, PCEF, OCS, and other Diameter and RADIUS related policy and charging features are available through Radiator Telco Pack</li>
+  <li>Complies with 3GPP2 P.S0001-A Wireless IP Network Standard up to version 3GPP X.S0011</li>
+</ul>
+
+<h3 id="what-platforms-are-supported-by-radiator"><a href="#supported-platforms">What platforms are supported by Radiator?</a></h3>
+
+<p>Radiator supports all <strong>the most used operating systems</strong> (Unix, Linux, Windows and Mac OS). For a complete list for different operating systems and for example Linux distributions, please see <a href="">https://radiatorsoftware.com/supported-platforms/</a>.</p>
+
+<h2 id="installation"><a href="#installation">Installation</a></h2>
+
+<h3 id="can-i-run-radiator-in-a-docker-container"><a href="#run-docker">Can I run Radiator in a Docker container?</a></h3>
+<p>Radiator can be run in a Docker container. Starting from Radiator 4.25 we have included Dockerfiles with the distribution to make it easier for running Radiator in a container. Check out more details from our blog: <a href="">https://blog.radiatorsoftware.com/2020/10/radiator-dockerfiles-now-available.html</a></p>
+
+<h2 id="deployment"><a href="#deployment">Deployment</a></h2>
+
+<h3 id="does-radiator-offer-repositories"><a href="#radiator-repositories">Does Radiator offer repositories?</a></h3>
+
+<p>Radiator repositories are available for various Unix/Linux distributions like RedHat, Ubuntu and Debian. See more from our blog <a href="">https://blog.radiatorsoftware.com/2020/03/introducing-new-radiator-repository.html</a></p>
+
+<h3 id="how-do-i-deploy-radiator"><a href="#deploying-radiator">How do I deploy Radiator?</a></h3>
+
+<p>Radiator can be deployed in multiple ways. We offer both repositories as well as ready made packages for various platforms. For other systems we have the tar.gz package available.</p>
+
+<p>The ready made packages for Unix/Linux environments can be used with the Radiator Software Ansible playbooks for automating not only the deployment but also the set up and management. More information on our Ansible playbooks can be found from our blog: <a href="">https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html</a></p>
+
+<p>Both repositories and ready made packages can also be used when deploying Radiator on Docker containers. Check out more details from our blog: <a href="">https://blog.radiatorsoftware.com/2020/10/radiator-dockerfiles-now-available.html</a></p>
+
+<p>For manual Radiator package deployment, see our installation instructions from <a href="">https://radiatorsoftware.com/products/radiator/installation/</a></p>
+
+<h2 id="management"><a href="#management">Management</a></h2>
+
+<h3 id="how-do-i-manage-radiator-instances-on-multiple-hosts"><a href="#instances-multiple-hosts">How do I manage Radiator instances on multiple hosts?</a></h3>
+
+<p>Radiator instances on multiple hosts can be managed with Ansible playbooks available in Radiator distribution packages from Radiator 4.25. The Radiator Software Ansible playbooks offer a more automated way to manage Radiator installation, set up, and instance management and they can be either used as is or tailored when needed. See more from our blog: <a href="">https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html</a></p>
+
+<h3 id="how-do-i-manage-radiator-instances-on-a-single-host"><a href="#instances-single-host">How do I manage Radiator instances on a single host?</a></h3>
+
+<p>Multiple Radiator instances on a single host can be managed either with Ansible playbooks available in Radiator distribution packages from Radiator 4.25 or with systemd.</p>
+
+<p>The Radiator Software Ansible playbooks offer a more automated way to manage Radiator installation, set up, and instance management and they can be either used as is or tailored when needed. See more from our blog: <a href="">https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html</a></p>
+
+<p>In addition to managing Radiator instances with Ansible, the Radiator instances running on the same host can be managed manually with systemd. We also offer a systemd service file which allows grouping the Radiator instances. Once grouped, all Radiator instances on the host can be controlled with a single systemctl command. Check out instructions for set up and usage from our blog: <a href="">https://blog.radiatorsoftware.com/2019/06/grouping-and-controlling-multiple.html</a></p>
+
+<h3 id="can-i-use-ansible"><a href="#ansible-management">Can I use Ansible?</a></h3>
+
+<p>Starting from Radiator 4.25 we have included Radiator Software Ansible playbooks with the distribution for installation, set up, and instance management. These playbooks can be used as is or then as a starting point and tailored for specific needs. See more from our blog: <a href="">https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html</a></p>
+
+<h2 id="monitoring"><a href="#monitoring">Monitoring</a></h2>
+
+<h3 id="how-snmp-is-supported-in-radiator"><a href="#monitoring-snmp">How SNMP is supported in Radiator?</a></h3>
+
+<p>Radiator includes SNMP agent support. The agent supports SNMP versions 1 and 2c and all the SNMP objects described in the following RFCs:</p>
+
+<ul>
+  <li>RFC2619 - RADIUS Authentication Server MIB</li>
+  <li>RFC2621 - RADIUS Accounting Server MIB</li>
+  <li>RFC4669 - RADIUS Authentication Server MIB for IPv6</li>
+  <li>RFC4671 - RADIUS Accounting Server MIB for IPv6</li>
+</ul>
+
+<h2 id="support"><a href="#support">Support</a></h2>
+
+<h3 id="how-can-i-contact-radiator-support"><a href="#contact-support">How can I contact Radiator support?</a></h3>
+
+<p>If you have a support contract, you may send email to radius-support (at) open.com.au. Include your support contract identifier in the Subject line. This email address is reserved for support contract holders only. For the detailed information about contacting support, please see <a href="">https://radiatorsoftware.com/support/</a></p>
+
+<h3 id="what-support-options-are-available"><a href="#support-options">What support options are available?</a></h3>
+
+<p>Radiator license package may include email support and telephone support. It’s also possible to purchase additional support packages, including consulting, training and custom coding. For more information about paid support, please see <a href="">https://radiatorsoftware.com/support/</a></p>
+
+<p>Latest Radiator reference manual and other information is available at <a href="">https://radiatorsoftware.com/products/radiator/</a></p>
+
+<h3 id="how-to-submit-feature-requests"><a href="#feature-request">How to submit feature requests?</a></h3>
+<p>We are interested in your feedback, both positive and negative, and bug reports. Please send them to <code class="language-plaintext highlighter-rouge">info (at) radiatorsoftware.com</code>.</p>
+
+<h3 id="how-do-i-submit-bug-reports"><a href="#bug-report">How do I submit bug reports?</a></h3>
+<p>We are interested in your feedback, both positive and negative, and bug reports. Please send them to <code class="language-plaintext highlighter-rouge">info (at) radiatorsoftware.com</code>. Radiator download access holders are entitled to free upgrades, and we do fix bugs that are reported to us, so if you report a bug, you can expect to get an upgrade with a fix one day.</p>
+
+<h2 id="security"><a href="#security">Security</a></h2>
+
+<h3 id="can-i-audit-radiator-aaa-server-source-code"><a href="#code-audit">Can I audit Radiator AAA Server source code?</a></h3>
+
+<p>We provide full source code for licensees so code can be audited, and it’s easy to track any changes between versions.</p>
+
+<h3 id="how-do-i-submit-security-issues--questions"><a href="#security-issues">How do I submit security issues / questions?</a></h3>
+
+<p>All security related issues concerning Radiator Software products or services should be reported to the following email address: <code class="language-plaintext highlighter-rouge">security (at) radiatorsoftware.com</code></p>
+
+<p>You can find more information on page <a href="">https://radiatorsoftware.com/security-contacts/</a></p>
+
+<h3 id="how-can-i-validate-the-software-downloads"><a href="#validate-downloads">How can I validate the software downloads?</a></h3>
+
+<p>All Radiator Software software packages are signed with a Radiator Software key. You can download the key from <a href="">https://radiatorsoftware.com/product-signing-keys/</a>
+and use it to verify the authenticity of the downloaded packages. When using Radiator Software supplied repositories, this verification is done automatically upon install or upgrade.
+There are also SHA256 checksums available for each file to help check that the file was downloaded successfully.</p>
+
+<script>
+// let toc=document.getElementById("markdown-toc")
+// let toc_cont=document.getElementById("toc-cont")
+// toc.parentNode.removeChild(toc);
+// toc_cont.appendChild(toc);
+</script>
+
+
+
+
+  </div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">Radiator Software Oy</li>
+          <li><a class="u-email" href="mailto:info@radiatorsoftware.com">info@radiatorsoftware.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Radiator AAA Server Frequently Asked Questions, Radiator RADIUS Server FAQ
+</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://twitter.com/RadiatorAAA" target="_blank" title="RadiatorAAA"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
