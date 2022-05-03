@@ -1,16 +1,29 @@
+# could be just
+# theme: minima
+# but currently this gived old 2.5.1
+# jumping to 3.x, we need to use remote-theme directly from repo:
+# https://github.com/jekyll/minima/issues/411
+# set up remote_theme
+remote_theme: jekyll/minima
+plugins:
+- jekyll-remote-theme
+
 # Configurations
-title:            About FAQ
-longtitle:        Radiator AAA server Frequently Asked Questions
-author:           Jani Lahti
-email:            jani.lahti@iki.fi
+title: Radiator AAA Server Frequently Asked Questions
 description: >
-  Radiator AAA server Frequently Asked Questions, Radiator RADIUS Server
+  Radiator AAA Server Frequently Asked Questions, Radiator RADIUS Server FAQ
 
-version:          1.0
-gitbook_version:  3.2.3
+author:
+  name: Radiator Software Oy
+  email: "info@radiatorsoftware.com"
 
-url:              'https://faq.radiatorsoftware.com'
-baseurl:          ''
+# google_analytics: [Your Google Analytics tracking ID]
+
+minima:
+  social_links:
+    twitter: RadiatorAAA
+#    github:  radiator-software
+#    linkedin: radiator-software
 
 toc:
   enabled: true
@@ -30,31 +43,3 @@ kramdown:
     guess_lang:           true
 
 syntax_highlighter_style: colorful
-
-markdown_ext:     markdown,mkdown,mkdn,mkd,md
-
-# Permalinks
-permalink:        /:categories/:year-:month-:day-:title:output_ext
-
-exclude:
-  - _drafts
-
-collections:
-  pages:
-    output: true
-    #permalink: /:collection/:path/
-    permalink: /:path/
-
-extra_css:
-  - stuff/rad.css
-
-# extra_header_js:
-# extra_footer_js:
-
-destination:      ./_site
-incremental:      false
-regenerate:       true
-
-#plugins:
-#  - jekyll-feed
-#  - jemoji
