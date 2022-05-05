@@ -58,7 +58,7 @@ Radiator was developed by Australian-based *Open System Consultants (OSC)* 1998-
 
 Radiator licencing is based on the number of servers used by the customer organisation. Radiator is available in different licence sizes starting from single server **Radiator Single Pack** and up to unlimited server count **Radiator Enterprise Pack**.
 
-Radiator can be extended with **Radiator Carrier Pack**, **Radiator SIM Pack**, **Radiator Telco Pack** and **Radiator GBA/BSF Pack**. Licencing for these add-on *Diameter modules* is based on the number of subscribers or alternatively concurrent sessions depending on the use case. 
+Radiator can be extended with **Radiator Service Provider Pack**, **Radiator SIM Pack**, **Radiator Telco Pack** and **Radiator GBA/BSF Pack**. Licencing for these add-on *Diameter modules* is based on the number of subscribers or alternatively concurrent sessions depending on the use case. 
 
 Other flexible licencing options are also available. Please contact Radiator sales if you’re interested in **service provider** licencing, **VNF** licencing, **white-label OEM** licencing or other models.
 
@@ -99,7 +99,7 @@ Full list can be seen from our technical documentation, but short listing is her
 - Supports HOTP, RFC [4226](https://datatracker.ietf.org/doc/html/rfc4226)
 - Supports TOTP, RFC [6238](https://datatracker.ietf.org/doc/html/rfc6238), sometimes referred as Google Authenticator
 - RADIUS SIP Digest authentication per draft-sterman-aaa-sip-00.txt and RFC [5090](https://datatracker.ietf.org/doc/html/rfc5090)
-- Diameter 3GPP EIR and other carrier features are available through Radiator Carrier Pack
+- Diameter 3GPP EIR and other carrier features are available through Radiator Service Provider Pack
 - Diameter 3GPP GBA/BSF support for VoLTE Supplementary Services and other related features are available through Radiator GBA/BSF Pack
 - Diameter 3GPP PCRF, PCEF, OCS, and other Diameter and RADIUS related policy and charging features are available through Radiator Telco Pack
 - Complies with 3GPP2 P.S0001-A Wireless IP Network Standard up to version 3GPP X.S0011
