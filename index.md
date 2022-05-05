@@ -157,10 +157,10 @@ Starting from Radiator 4.25 we have included Radiator Software Ansible playbooks
 
 Radiator includes SNMP agent support. The agent supports SNMP versions 1 and 2c and all the SNMP objects described in the following RFCs:
 
-- RFC2619 - RADIUS Authentication Server MIB
-- RFC2621 - RADIUS Accounting Server MIB
-- RFC4669 - RADIUS Authentication Server MIB for IPv6
-- RFC4671 - RADIUS Accounting Server MIB for IPv6
+- RFC [2619](https://datatracker.ietf.org/doc/html/rfc2619) - RADIUS Authentication Server MIB
+- RFC [2621](https://datatracker.ietf.org/doc/html/rfc2621) - RADIUS Accounting Server MIB
+- RFC [4669](https://datatracker.ietf.org/doc/html/rfc4669) - RADIUS Authentication Server MIB for IPv6
+- RFC [4671](https://datatracker.ietf.org/doc/html/rfc4671) - RADIUS Accounting Server MIB for IPv6
 
 
 ## [Support](#support)
