@@ -17,7 +17,7 @@ Updated: {{ site.time | date: "%Y-%m-%d" }}
 
 ### [What is the best RADIUS server?](#best-radius-server)
 
-From our point of view, Radiator AAA Server is the best choice for **RADIUS**, **Diameter** and other **AAA** server needs. Because of the flexibility of Radiator, our customers call it the *Swiss Army knife of RADIUS servers*. More info on Radiator can be found from Radiator product site [https://radiatorsoftware.com/products/radiator/]()
+From our point of view, Radiator AAA Server is the best choice for **RADIUS**, **Diameter** and other **AAA** server needs. Because of the flexibility of Radiator, our customers call it the *Swiss Army knife of RADIUS servers*. More info on Radiator can be found from Radiator product site <https://radiatorsoftware.com/products/radiator/>
 
 ### [Is Radiator open source?](#is-radiator-open-source)
 
@@ -25,7 +25,7 @@ Radiator is not open source, but when you purchase Radiator, full source code is
 
 ### [How much does Radiator cost?](#how-much-radiator-cost)
 
-You can see selected Radiator licence prices at [https://radiatorsoftware.com/pricelist/](). Pricing for the Radiator add-on modules is provided upon request by contacting Radiator sales.
+You can see selected Radiator licence prices at <https://radiatorsoftware.com/pricelist/>. Pricing for the Radiator add-on modules is provided upon request by contacting Radiator sales.
 
 ### [Who is using Radiator?](#who-is-using-radiator)
 
@@ -33,7 +33,7 @@ Radiator AAA server is used for user and network authentication by a huge range 
 
 ### [References](#references)
 
-Radiator has a large and active worldwide customer base. Please see our website for customer references: [https://radiatorsoftware.com/customers/]()
+Radiator has a large and active worldwide customer base. Please see our website for customer references: <https://radiatorsoftware.com/customers/>
 
 ### [Is there an online demo available?](#online-demo)
 
@@ -64,7 +64,7 @@ Other flexible licencing options are also available. Please contact Radiator sal
 
 ### [Is there a demo version of Radiator?](#demo-version-of-radiator)
 
-Radiator is available as an *evaluation version*. You can request a free *30 day evaluation licence* by filling out our evaluation form: [https://radiatorsoftware.com/evaluation/]().
+Radiator is available as an *evaluation version*. You can request a free *30 day evaluation licence* by filling out our evaluation form: <https://radiatorsoftware.com/evaluation/>
 
 ### [What is the difference between the fully licensed and demo versions?](#difference-between-fully-licensed-and-demo-versions)
 
@@ -106,49 +106,49 @@ Full list can be seen from our technical documentation, but short listing is her
 
 ### [What platforms are supported by Radiator?](#supported-platforms)
 
-Radiator supports all **the most used operating systems** (Unix, Linux, Windows and Mac OS). For a complete list for different operating systems and for example Linux distributions, please see [https://radiatorsoftware.com/supported-platforms/]().
+Radiator supports all **the most used operating systems** (Unix, Linux, Windows and Mac OS). For a complete list for different operating systems and for example Linux distributions, please see <https://radiatorsoftware.com/supported-platforms/>
 
 
 ## [Installation](#installation)
 
 ### [Can I run Radiator in a Docker container?](#run-docker)
-Radiator can be run in a Docker container. Starting from Radiator 4.25 we have included Dockerfiles with the distribution to make it easier for running Radiator in a container. Check out more details from our blog: [https://blog.radiatorsoftware.com/2020/10/radiator-dockerfiles-now-available.html]()
+Radiator can be run in a Docker container. Starting from Radiator 4.25 we have included Dockerfiles with the distribution to make it easier for running Radiator in a container. Check out more details from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-dockerfiles-now-available.html>
 
 
 ## [Deployment](#deployment)
 
 ### [Does Radiator offer repositories?](#radiator-repositories)
 
-Radiator repositories are available for various Unix/Linux distributions like RedHat, Ubuntu and Debian. See more from our blog [https://blog.radiatorsoftware.com/2020/03/introducing-new-radiator-repository.html]()
+Radiator repositories are available for various Unix/Linux distributions like RedHat, Ubuntu and Debian. See more from our blog <https://blog.radiatorsoftware.com/2020/03/introducing-new-radiator-repository.html>
 
 ### [How do I deploy Radiator?](#deploying-radiator)
 
 Radiator can be deployed in multiple ways. We offer both repositories as well as ready made packages for various platforms. For other systems we have the tar.gz package available.
 
-The ready made packages for Unix/Linux environments can be used with the Radiator Software Ansible playbooks for automating not only the deployment but also the set up and management. More information on our Ansible playbooks can be found from our blog: [https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html]()
+The ready made packages for Unix/Linux environments can be used with the Radiator Software Ansible playbooks for automating not only the deployment but also the set up and management. More information on our Ansible playbooks can be found from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html>
 
-Both repositories and ready made packages can also be used when deploying Radiator on Docker containers. Check out more details from our blog: [https://blog.radiatorsoftware.com/2020/10/radiator-dockerfiles-now-available.html]()
+Both repositories and ready made packages can also be used when deploying Radiator on Docker containers. Check out more details from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-dockerfiles-now-available.html>
 
-For manual Radiator package deployment, see our installation instructions from [https://radiatorsoftware.com/products/radiator/installation/]()
+For manual Radiator package deployment, see our installation instructions from <https://radiatorsoftware.com/products/radiator/installation/>
 
 
 ## [Management](#management)
 
 ### [How do I manage Radiator instances on multiple hosts?](#instances-multiple-hosts)
 
-Radiator instances on multiple hosts can be managed with Ansible playbooks available in Radiator distribution packages from Radiator 4.25. The Radiator Software Ansible playbooks offer a more automated way to manage Radiator installation, set up, and instance management and they can be either used as is or tailored when needed. See more from our blog: [https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html]()
+Radiator instances on multiple hosts can be managed with Ansible playbooks available in Radiator distribution packages from Radiator 4.25. The Radiator Software Ansible playbooks offer a more automated way to manage Radiator installation, set up, and instance management and they can be either used as is or tailored when needed. See more from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html>
 
 ### [How do I manage Radiator instances on a single host?](#instances-single-host)
 
 Multiple Radiator instances on a single host can be managed either with Ansible playbooks available in Radiator distribution packages from Radiator 4.25 or with systemd.
 
-The Radiator Software Ansible playbooks offer a more automated way to manage Radiator installation, set up, and instance management and they can be either used as is or tailored when needed. See more from our blog: [https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html]()
+The Radiator Software Ansible playbooks offer a more automated way to manage Radiator installation, set up, and instance management and they can be either used as is or tailored when needed. See more from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html>
 
-In addition to managing Radiator instances with Ansible, the Radiator instances running on the same host can be managed manually with systemd. We also offer a systemd service file which allows grouping the Radiator instances. Once grouped, all Radiator instances on the host can be controlled with a single systemctl command. Check out instructions for set up and usage from our blog: [https://blog.radiatorsoftware.com/2019/06/grouping-and-controlling-multiple.html]()
+In addition to managing Radiator instances with Ansible, the Radiator instances running on the same host can be managed manually with systemd. We also offer a systemd service file which allows grouping the Radiator instances. Once grouped, all Radiator instances on the host can be controlled with a single systemctl command. Check out instructions for set up and usage from our blog: <https://blog.radiatorsoftware.com/2019/06/grouping-and-controlling-multiple.html>
 
 ### [Can I use Ansible?](#ansible-management)
 
-Starting from Radiator 4.25 we have included Radiator Software Ansible playbooks with the distribution for installation, set up, and instance management. These playbooks can be used as is or then as a starting point and tailored for specific needs. See more from our blog: [https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html]()
+Starting from Radiator 4.25 we have included Radiator Software Ansible playbooks with the distribution for installation, set up, and instance management. These playbooks can be used as is or then as a starting point and tailored for specific needs. See more from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html>
 
 
 ## [Monitoring](#monitoring)
@@ -167,13 +167,13 @@ Radiator includes SNMP agent support. The agent supports SNMP versions 1 and 2c 
 
 ### [How can I contact Radiator support?](#contact-support)
 
-If you have a support contract, you may send email to radius-support (at) open.com.au. Include your support contract identifier in the Subject line. This email address is reserved for support contract holders only. For the detailed information about contacting support, please see [https://radiatorsoftware.com/support/]()
+If you have a support contract, you may send email to radius-support (at) open.com.au. Include your support contract identifier in the Subject line. This email address is reserved for support contract holders only. For the detailed information about contacting support, please see <https://radiatorsoftware.com/support/>
 
 ### [What support options are available?](#support-options)
 
-Radiator license package may include email support and telephone support. It's also possible to purchase additional support packages, including consulting, training and custom coding. For more information about paid support, please see [https://radiatorsoftware.com/support/]()
+Radiator license package may include email support and telephone support. It's also possible to purchase additional support packages, including consulting, training and custom coding. For more information about paid support, please see <https://radiatorsoftware.com/support/>
 
-Latest Radiator reference manual and other information is available at [https://radiatorsoftware.com/products/radiator/]()
+Latest Radiator reference manual and other information is available at <https://radiatorsoftware.com/products/radiator/>
 
 ### [How to submit feature requests?](#feature-request)
 We are interested in your feedback, both positive and negative, and bug reports. Please send them to `info (at) radiatorsoftware.com`.
@@ -192,11 +192,11 @@ We provide full source code for licensees so code can be audited, and it's easy 
 
 All security related issues concerning Radiator Software products or services should be reported to the following email address: `security (at) radiatorsoftware.com`
 
-You can find more information on page [https://radiatorsoftware.com/security-contacts/]()
+You can find more information on page <https://radiatorsoftware.com/security-contacts/>
 
 ### [How can I validate the software downloads?](#validate-downloads)
 
-All Radiator Software software packages are signed with a Radiator Software key. You can download the key from [https://radiatorsoftware.com/product-signing-keys/]()
+All Radiator Software software packages are signed with a Radiator Software key. You can download the key from <https://radiatorsoftware.com/product-signing-keys/>
 and use it to verify the authenticity of the downloaded packages. When using Radiator Software supplied repositories, this verification is done automatically upon install or upgrade.
 There are also SHA256 checksums available for each file to help check that the file was downloaded successfully.
 
