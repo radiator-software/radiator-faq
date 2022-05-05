@@ -77,27 +77,28 @@ Evaluation software has the *full functionality of Radiator*. The difference is 
 
 Full list can be seen from our technical documentation, but short listing is here:
 
-- Complies with RFCs 2548, 2619, 2621, 2865, 2866, 2867, 2868, 2869, 3579, 4669, 4671, 5176, 5997
-- Dictionary or other applicable support for RFCs 4372, 4849, 4675, 4849, 5080, 5447, 5580, 5607, 5904, 6158, 6929, 6519, 6572, 6677, 7055, 7268, 8044
-- Supports RFC 6614, also known as RadSec – secure, reliable RADIUS proxying
-- Acts as a Diameter to RADIUS gateway for NAS authentication and accounting. Supports Diameter RFCs 3588, 6733, 4072, 4005, 7155.
+
+- Complies with RFCs [2548](https://datatracker.ietf.org/doc/html/rfc2548), [2619](https://datatracker.ietf.org/doc/html/rfc2619), [2621](https://datatracker.ietf.org/doc/html/rfc2621), [2865](https://datatracker.ietf.org/doc/html/rfc2865), [2866](https://datatracker.ietf.org/doc/html/rfc2866), [2867](https://datatracker.ietf.org/doc/html/rfc2867), [2868](https://datatracker.ietf.org/doc/html/rfc2868), [2869](https://datatracker.ietf.org/doc/html/rfc2869), [3579](https://datatracker.ietf.org/doc/html/rfc3579), [4669](https://datatracker.ietf.org/doc/html/rfc4669), [4671](https://datatracker.ietf.org/doc/html/rfc4671), [5176](https://datatracker.ietf.org/doc/html/rfc5176), [5997](https://datatracker.ietf.org/doc/html/rfc5997)
+- Dictionary or other applicable support for RFCs [4372](https://datatracker.ietf.org/doc/html/rfc4372), [4849](https://datatracker.ietf.org/doc/html/rfc4849), [4675](https://datatracker.ietf.org/doc/html/rfc4675), [4849](https://datatracker.ietf.org/doc/html/rfc4849), [5080](https://datatracker.ietf.org/doc/html/rfc5080), [5447](https://datatracker.ietf.org/doc/html/rfc5447), [5580](https://datatracker.ietf.org/doc/html/rfc5580), [5607](https://datatracker.ietf.org/doc/html/rfc5607), [5904](https://datatracker.ietf.org/doc/html/rfc5904), [6158](https://datatracker.ietf.org/doc/html/rfc6158), [6929](https://datatracker.ietf.org/doc/html/rfc6929), [6519](https://datatracker.ietf.org/doc/html/rfc6519), [6572](https://datatracker.ietf.org/doc/html/rfc6572), [6677](https://datatracker.ietf.org/doc/html/rfc6677), [7055](https://datatracker.ietf.org/doc/html/rfc7055), [7268](https://datatracker.ietf.org/doc/html/rfc7268), [8044](https://datatracker.ietf.org/doc/html/rfc8044)
+- Supports RFC [6614](https://datatracker.ietf.org/doc/html/rfc6614), also known as RadSec – secure, reliable RADIUS proxying
+- Acts as a Diameter to RADIUS gateway for NAS authentication and accounting. Supports Diameter RFCs [3588](https://datatracker.ietf.org/doc/html/rfc3588), [6733](https://datatracker.ietf.org/doc/html/rfc6733), [4072](https://datatracker.ietf.org/doc/html/rfc4072), [4005](https://datatracker.ietf.org/doc/html/rfc4005), [7155](https://datatracker.ietf.org/doc/html/rfc7155)
 - Acts as a RADIUS to Diameter gateway for NAS authentication and accounting.
-- Supports EAP in accordance with RFC 3748
-- Supports EAP-MD-Challenge, EAP-OTP and EAP-GTC, RFC 3748
-- Supports EAP TLS, RFC 5216
-- Supports EAP TTLS, RFC 5281
+- Supports EAP in accordance with RFC [3748](https://datatracker.ietf.org/doc/html/rfc3748)
+- Supports EAP-MD-Challenge, EAP-OTP and EAP-GTC, RFC [3748](https://datatracker.ietf.org/doc/html/rfc3748)
+- Supports EAP TLS, RFC [5216](https://datatracker.ietf.org/doc/html/rfc5216)
+- Supports EAP TTLS, RFC [5281](https://datatracker.ietf.org/doc/html/rfc5281)
 - Supports PEAP, IETF drafts and MS-PEAP
 - Supports EAP-MSCHAP-V2
 - Supports Cisco LEAP
-- Supports EAP-FAST, RFC 4851
-- Supports EAP-pwd, RFC 5931
-- Supports EAP-PSK, RFC 4764
-- Supports EAP-PAX, RFC 4746
+- Supports EAP-FAST, RFC [4851](https://datatracker.ietf.org/doc/html/rfc4851)
+- Supports EAP-pwd, RFC [5931](https://datatracker.ietf.org/doc/html/rfc5931)
+- Supports EAP-PSK, RFC [4764](https://datatracker.ietf.org/doc/html/rfc4764)
+- Supports EAP-PAX, RFC [4746](https://datatracker.ietf.org/doc/html/rfc4746)
 - EAP-SIM, EAP-AKA, EAP-AKA’, 3GPP AAA Server and other related features are available through Radiator SIM Pack
 - Acts as authentication server for IEEE 802.1X with support for IEEE 802.1AE, also known as MACsec
-- Supports HOTP, RFC 4226
-- Supports TOTP, RFC 6238, sometimes referred as Google Authenticator
-- RADIUS SIP Digest authentication per draft-sterman-aaa-sip-00.txt and RFC 5090
+- Supports HOTP, RFC [4226](https://datatracker.ietf.org/doc/html/rfc4226)
+- Supports TOTP, RFC [6238](https://datatracker.ietf.org/doc/html/rfc6238), sometimes referred as Google Authenticator
+- RADIUS SIP Digest authentication per draft-sterman-aaa-sip-00.txt and RFC [5090](https://datatracker.ietf.org/doc/html/rfc5090)
 - Diameter 3GPP EIR and other carrier features are available through Radiator Carrier Pack
 - Diameter 3GPP GBA/BSF support for VoLTE Supplementary Services and other related features are available through Radiator GBA/BSF Pack
 - Diameter 3GPP PCRF, PCEF, OCS, and other Diameter and RADIUS related policy and charging features are available through Radiator Telco Pack
