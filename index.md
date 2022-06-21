@@ -111,6 +111,42 @@ Radiator supports all **the most used operating systems** (Unix, Linux, Windows 
 
 ## [Installation](#installation)
 
+### [Perl versions](#installation-perl)
+
+Radiator requires Perl 5.8.8 or newer to function. Radiator is written entirely in Perl and is therefore highly portable. We also provide full source code. Many Unix distributions include Perl as part of the standard installation. Common Windows Perl distributions include ActivePerl and Strawberry Perl. For easy deployment on Windows environments, the Radiator MSI package contains a Strawberry Perl portable version.
+
+### [How do I install Radiator?](#installation-radiator)
+
+Radiator offers a wide selection of installation packages in various formats, for example RPM, deb and MSI. In case a suitable format is not available, Radiator can also be installed from the archive package.
+
+Installation instructions for various cases are available in our reference manual chapter [Installing and upgrading Radiator](https://files.radiatorsoftware.com/radiator/ref/toc.html) as well in our web pages <https://radiatorsoftware.com/products/radiator/installation/>
+
+### [Where the packages end up on Linux distributions?](#installation-linuxenv)
+
+When Radiator is installed on Linux, several locations are created. Radiator default configuration is available for modifications on _/etc/radiator/radiator.conf_, logs by default go to Radiator log directory _/var/log/radiator/_ and the full source code to _/opt/radiator/_. For full list of all locations created, see installation instructions on Radiator reference manual chapter [Installing and upgrading Radiator](https://files.radiatorsoftware.com/radiator/ref/toc.html), for example [Installing and upgrading on Linux](https://files.radiatorsoftware.com/radiator/ref/Linux-el-rpm-Installation.html#Linux-el-rpm-Installation).
+
+The Radiator goodies which has several example configurations is available in _/opt/radiator/radiator/goodies/_
+
+### [Where the packages end up on Windows environment?](#installation-winenv)
+
+When Radiator is installed on Windows, the installation package automatically uses the disk with the most space available. The exact installation location is shown on the installation dialog once the installation is finished. Radiator is installed to the _\Radiator\Radiator\\_ directory, for example if E drive was used the location would be _E:\Radiator\Radiator\\_. The Radiator MSI package also includes Strawberry Perl, which is installed to the _\Radiator\StrawberryPerl-Radiator\\_ directory. The Radiator default configuration and default log directory is _\Program Files\Radiator\\_ directory.
+
+The Radiator goodies which has several example configurations is available in _\Radiator\Radiator\goodies\\_ 
+
+See more from Radiator reference manual chapter [Installing and upgrading on Windows](https://files.radiatorsoftware.com/radiator/ref/Windows.html#Windows)
+
+### [Where to add licence key (evaluations)?](#installation-evaluationlicense)
+
+Radiator offers an evaluation license which allows trying out and testing Radiator easily. With the evaluation version, the license key must be available in the Radiator configuration. The license key contents can be copied directly to the Radiator configuration, but the recommended option is to have the license information as a separate file, which is then included in the Radiator configuration.
+
+- First copy the license key carefully to the Radiator server under _/etc/radiator_ on Linux environments or _\Program Files\Radiator\\_ on Windows environments.
+- Then edit the Radiator configuration usually located in the same directory to include the license file by adding to the Radiator configuration the lines. These lines should be located in the upper part of the Radiator configuration, but not before `DbDir` definition. A good place is right after the `LogFile` definition but before the `DictionaryFile` definition.
+```
+  # Read possible license configuration parameters from this file
+  LicenseFile %D/license.conf
+``` 
+- Once the lines are added to the Radiator configuration, Radiator must be restarted so the new content of the license file is read. Use `systemctl restart radiator` on Linux environments or restart Radiator service from Services on Windows environments.
+
 ### [Can I run Radiator in a Docker container?](#run-docker)
 Radiator can be run in a Docker container. Starting from Radiator 4.25 we have included Dockerfiles with the distribution to make it easier for running Radiator in a container. Check out more details from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-dockerfiles-now-available.html>
 
@@ -161,6 +197,37 @@ Radiator includes SNMP agent support. The agent supports SNMP versions 1 and 2c 
 - RFC [2621](https://datatracker.ietf.org/doc/html/rfc2621) - RADIUS Accounting Server MIB
 - RFC [4669](https://datatracker.ietf.org/doc/html/rfc4669) - RADIUS Authentication Server MIB for IPv6
 - RFC [4671](https://datatracker.ietf.org/doc/html/rfc4671) - RADIUS Accounting Server MIB for IPv6
+
+### [How can I monitor Radiator?](#monitoring-how)
+
+Radiator monitoring can be done with the information available in various log files. The recommended approach is to log the information in suitable format, for example JSON and then visualise the information with a 3rd party tool like Splunk or Elasticsearch. See more from our blog: <https://blog.radiatorsoftware.com/2016/06/make-your-radiator-log-data-searchable.html> and <https://blog.radiatorsoftware.com/2016/09/make-your-radiator-log-data-searchable.html>
+
+### [Is there a dashboard?](#monitoring-dashboard)
+
+Radiator is a command line application and does not contain a dashboard itself. Due to the many options Radiator has for logging and statistics collection, creating a suitable dashboard with e.g. Splunk is possible.
+
+### [How do I integrate external monitoring solutions with Radiator?](#monitoring-external)
+
+Simple way to integrate for example Splunk with Radiator is to log statistics information from Radiator to a JSON file with `<StatsLog FILE>`, and then use for example Splunk Universal Forwarder or a custom script to forward the needed statistics to Splunk. Similarly it is possible to integrate for example Kibana with Radiator. See more from our blog: <https://blog.radiatorsoftware.com/2016/09/make-your-radiator-log-data-searchable.html>
+
+
+## [Logging](#logging)
+
+### [What logging formats Radiator supports?](#logging-formats)
+
+Radiator has a default logging format, which can be configured either with Radiator configuration parameter `LogFormat` or with a Perl hook called `LogFormatHook`. In addition, Radiator supports JSON and CEF log formats by default. Radiator goodies directory has an example on how to configure different log formats in file _logformat.cfg_
+
+### [Where does Radiator logging go?](#logging-options)
+
+Radiator has several options for logging. Logs can go to a flat file on Radiator server, to a SQL database, to syslog logging facility or in case of Microsoft Windows logs can go to Microsoft Windows Event Log. Statistics can also be logged to REDIS.
+Although Radiator can log directly to remote syslog facility/facilities, it can have performance impact on Radiator. So from performance point it is better to log to SYSLOG on the local Radiator host and then have SYSLOG itself forward logs to remote syslog facilities.
+
+### [How do I configure Radiator logs?](#logging-configure)
+
+Each Radiator log can be configured with Radiator configuration. Radiator can log authentication, accounting and general Radiator related information. Radiator configuration can have several different logging clauses defined at the same time. For example it is possible to log authentication to both file (`<AuthLog FILE>`) and SQL (`<AuthLog SQL>`) while at the same time logging accounting to file (`<AcctLog FILE>`), SQL (`<AcctLog SQL>`) and SYSLOG (`<AcctLog SYSLOG>`). All the same options apply also to Radiator general logs with clauses like `<Log FILE>` and `<Log SYSLOG>` and for statistics with clauses like `<StatsLog FILE>` and `<StatsLog REDIS>`.
+Radiator goodies directory has an example on how to configure several different logs in file _logformat.cfg_
+
+Default configuration for log rorate is automatically configured by Radiator during installation. It is available in _/etc/logrotate.d/radiator_ and can be edited when needed.
 
 
 ## [Support](#support)
