@@ -136,7 +136,9 @@ Radiator requires Perl 5.8.8 or newer to function. Radiator is written entirely 
 
 ### [How do I install Radiator?](#installation-radiator)
 
-Radiator offers a wide selection of installation packages in various formats, for example RPM, deb and MSI. In case a suitable format is not available, Radiator can also be installed from the archive package.
+Radiator offers a wide selection of installation packages in various formats, for example RPM, deb and MSI. In case a suitable format is not available, Radiator can also be installed from the archive package. In addition of Radiator releases, we also have testing packages available. Testing packages contain changes planned for the next Radiator release.
+
+Radiator installation packages are available for download and also from our repositories.
 
 Installation instructions for various cases are available in our reference manual chapter [Installing and upgrading Radiator](https://files.radiatorsoftware.com/radiator/ref/toc.html) as well in our web pages <https://radiatorsoftware.com/products/radiator/installation/>
 
@@ -152,7 +154,7 @@ When Radiator is installed on Windows, the installation package automatically us
 
 The Radiator goodies which has several example configurations is available in _\Radiator\Radiator\goodies\\_ 
 
-See more from Radiator reference manual chapter [Installing and upgrading on Windows](https://files.radiatorsoftware.com/radiator/ref
+See more from Radiator reference manual chapter [Installing and upgrading on Windows](https://files.radiatorsoftware.com/radiator/ref/Windows.html)
 
 ### [Where to add licence key (evaluations)?](#installation-evaluationlicense)
 
