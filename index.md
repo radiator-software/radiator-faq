@@ -125,7 +125,7 @@ Radiator leverages customer's existing database infrastructure. High-availabilit
 
 Multiple database sources can be specified for Radiator. Whenever Radiator connects to a database, connection to the first listed source is tried. If that connection fails, Radiator tries the second, third and so on, until all the databases are tried, and finally gives up without replying to the NAS. This gives the NAS the opportunity to fall back to another RADIUS server if all SQL databases are down.
 
-See also RADIUS high-availability and redundancy.
+See also [How is RADIUS high-availability achieved?](#radius-ha)
 
 
 ## [Installation](#installation)
@@ -152,9 +152,9 @@ The Radiator goodies which has several example configurations is available in _/
 
 When Radiator is installed on Windows, the installation package automatically uses the disk with the most space available. The exact installation location is shown on the installation dialog once the installation is finished. Radiator is installed to the _\Radiator\Radiator\\_ directory, for example if E drive was used the location would be _E:\Radiator\Radiator\\_. The Radiator MSI package also includes Strawberry Perl, which is installed to the _\Radiator\StrawberryPerl-Radiator\\_ directory. The Radiator default configuration and default log directory is _\Program Files\Radiator\\_ directory.
 
-The Radiator goodies which has several example configurations is available in _\Radiator\Radiator\goodies\\_ 
+The Radiator goodies which has several example configurations is available in _\Radiator\Radiator\goodies\\_
 
-See more from Radiator reference manual chapter [Installing and upgrading on Windows](https://files.radiatorsoftware.com/radiator/ref/Windows.html)
+See more from Radiator reference manual chapter [Installing and upgrading on Windows](https://files.radiatorsoftware.com/radiator/ref/Windows.html).
 
 ### [Where to add licence key (evaluations)?](#installation-evaluationlicense)
 
@@ -207,6 +207,24 @@ In addition to managing Radiator instances with Ansible, the Radiator instances 
 
 Starting from Radiator 4.25 we have included Radiator Software Ansible playbooks with the distribution for installation, set up, and instance management. These playbooks can be used as is or then as a starting point and tailored for specific needs. See more from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html>
 
+### [How is RADIUS high-availability achieved?](#radius-ha)
+
+HA is based on running multiple parallel RADIUS servers (only active-active model is used). The selection of an active RADIUS server or load-balancing of the requests between RADIUS servers is commonly decided by the RADIUS clients. The authentication backend (e.g. LDAP, SQL) redundancy and high availability is provided by the backend and backend drivers, not the RADIUS server.
+
+### [How to implement HA and redundancy in Radiator?](#radius-ha-implementation)
+
+High-availability is a combined result of proper:
+
+- RADIUS client configuration
+- RADIUS server configuration
+- backend driver configuration
+- backend design and configuration
+- geographical and network positioning of RADIUS and backend servers
+- network connectivity
+- testing
+
+Without considering all of these together, the RADIUS infrastructure high-availability and redundancy cannot be ensured.
+
 
 ## [Monitoring](#monitoring)
 
@@ -221,7 +239,7 @@ Radiator includes SNMP agent support. The agent supports SNMP versions 1 and 2c 
 
 ### [How can I monitor Radiator?](#monitoring-how)
 
-Radiator monitoring can be done with the information available in various log files. The recommended approach is to log the information in suitable format, for example JSON and then visualise the information with a 3rd party tool like Splunk or Elasticsearch. See more from our blog: <https://blog.radiatorsoftware.com/2016/06/make-your-radiator-log-data-searchable.html> and <https://blog.radiatorsoftware.com/2016/09/make-your-radiator-log-data-searchable.html>
+Radiator monitoring can be done with the information available in various log files. The recommended approach is to log the information in suitable format, for example JSON and then visualise the information with a 3rd party tool like Splunk or Elasticsearch. See more from our blog: [Make your Radiator log data searchable, part 1](https://blog.radiatorsoftware.com/2016/06/make-your-radiator-log-data-searchable.html) and [part 2](https://blog.radiatorsoftware.com/2016/09/make-your-radiator-log-data-searchable.html).
 
 ### [Is there a dashboard?](#monitoring-dashboard)
 
