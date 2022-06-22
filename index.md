@@ -305,7 +305,6 @@ All Radiator Software software packages are signed with a Radiator Software key.
 and use it to verify the authenticity of the downloaded packages. When using Radiator Software supplied repositories, this verification is done automatically upon install or upgrade.
 There are also SHA256 checksums available for each file to help check that the file was downloaded successfully.
 
-
 <script>
 // let toc=document.getElementById("markdown-toc")
 // let toc_cont=document.getElementById("toc-cont")
