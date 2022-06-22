@@ -52,25 +52,6 @@ Radiator was developed by Australian-based *Open System Consultants (OSC)* 1998-
 *Radiator Software Oy* is the sole manufacturer of Radiator AAA Server software. *Radiator Software* sells Radiator licences globally and you can buy a licence directly from the Radiator team. Radiator licences are also sold through various distribution partners all over the world.
 
 
-## [Licensing](#licencing)
-
-### [How Radiator licensing works?](#how-radiator-licencing-works)
-
-Radiator licensing is based on the number of servers used by the customer organisation. Radiator is available in different licence sizes starting from single server **Radiator Single Pack** and up to unlimited server count **Radiator Enterprise Pack**.
-
-Radiator can be extended with **Radiator Service Provider Pack**, **Radiator SIM Pack**, **Radiator Telco Pack** and **Radiator GBA/BSF Pack**. Licensing for these add-on *Diameter modules* is based on the number of subscribers or alternatively concurrent sessions depending on the use case. 
-
-Other flexible licensing options are also available. Please contact Radiator sales if you’re interested in **service provider** licensing, **VNF** licensing, **white-label OEM** licensing or other models.
-
-### [Is there a demo version of Radiator?](#demo-version-of-radiator)
-
-Radiator is available as an *evaluation version*. You can request a free *30 day evaluation licence* by filling out our evaluation form: <https://radiatorsoftware.com/evaluation/>
-
-### [What is the difference between the fully licensed and demo versions?](#difference-between-fully-licensed-and-demo-versions)
-
-Evaluation software has the *full functionality of Radiator*. The difference is that evaluation software is time limited and requires a licence key to activate, and the source code is obscured.
-
-
 ## [Features](#features)
 
 ### [Which RFCs, protocols and authentication methods are supported by Radiator?](#rfcs-protocols-and-authentication-methods)
@@ -268,6 +249,24 @@ Radiator goodies directory has an example on how to configure several different 
 
 Default configuration for log rorate is automatically configured by Radiator during installation. It is available in _/etc/logrotate.d/radiator_ and can be edited when needed.
 
+
+## [Licensing](#licencing)
+
+### [How Radiator licensing works?](#how-radiator-licencing-works)
+
+Radiator licensing is based on the number of servers used by the customer organisation. Radiator is available in different licence sizes starting from single server **Radiator Single Pack** and up to unlimited server count **Radiator Enterprise Pack**.
+
+Radiator can be extended with **Radiator Service Provider Pack**, **Radiator SIM Pack**, **Radiator Telco Pack** and **Radiator GBA/BSF Pack**. Licensing for these add-on *Diameter modules* is based on the number of subscribers or alternatively concurrent sessions depending on the use case. 
+
+Other flexible licensing options are also available. Please contact Radiator sales if you’re interested in **service provider** licensing, **VNF** licensing, **white-label OEM** licensing or other models.
+
+### [Is there a demo version of Radiator?](#demo-version-of-radiator)
+
+Radiator is available as an *evaluation version*. You can request a free *30 day evaluation licence* by filling out our evaluation form: <https://radiatorsoftware.com/evaluation/>
+
+### [What is the difference between the fully licensed and demo versions?](#difference-between-fully-licensed-and-demo-versions)
+
+Evaluation software has the *full functionality of Radiator*. The difference is that evaluation software is time limited and requires a licence key to activate, and the source code is obscured.
 
 ## [Support](#support)
 
