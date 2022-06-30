@@ -152,6 +152,31 @@ Radiator offers an evaluation license which allows trying out and testing Radiat
 ### [Can I run Radiator in a Docker container?](#run-docker)
 Radiator can be run in a Docker container. Starting from Radiator 4.25 we have included Dockerfiles with the distribution to make it easier for running Radiator in a container. Check out more details from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-dockerfiles-now-available.html>
 
+## [Configuration](#configuration)
+
+### [How to configure Radiator](#configration-howto)
+
+When Radiator starts, it reads its configuration from a file. This configuration file is typically named _/etc/radiator/radiator.conf_ and it can be edited with a text editor. Radiator configuration files can include additional parts of configuration from one or many other files. On Windows the Radiator configuration goes to
+_\Program Files\Radiator\\_ folder.
+
+### [Where can I find Radiator sample configurations?](#configuration-samples)
+
+When you install Radiator from a .deb or a .RPM archive, see directory _/opt/radiator/radiator/goodies/_. This directory has configuration samples, some utility programs and other configuration related files. On Windows, see _\Radiator\Radiator\goodies\\_ on the drive Radiator installs on.
+
+Here's an example on Linux of how to set up a basic configuration that uses a text file for user credentials and authorisation settings. On Windows, adjust the paths accordingly.
+
+```sh
+cd /etc/radiator
+sudo cp -a -i radiator.conf radiator.conf.dist
+sudo cp /opt/radiator/radiator/goodies/simple.cfg radiator.conf
+sudo cp /opt/radiator/radiator/goodies/simple-users users
+sudo systemctl restart radiator
+/opt/radiator/radiator/radpwtst -trace 4 -noacct
+```
+
+Sample files in goodies directory typically show just one topic. To add authentication logging, see _authlog.cfg_ in goodies directory and add the logging specific parts into your _radiator.conf_ file. File `README` in goodies gives a brief description of each goodies file.
+
+Our advice is to start with a simple configuration that can be tested while you add more features to it. See [Configuring Radiator](https://files.radiatorsoftware.com/radiator/ref/Configuration.html) in Radiator reference manual for more information.
 
 ## [Deployment](#deployment)
 
