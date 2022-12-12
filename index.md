@@ -89,6 +89,9 @@ Full list can be seen from our technical documentation, but short listing is her
 
 Radiator supports all **the most used operating systems** (Unix, Linux, Windows and Mac OS). For a complete list for different operating systems and for example Linux distributions, please see <https://radiatorsoftware.com/supported-platforms/>
 
+### [I know I can use telnet, but can I use ssh?](#telnet-ssh)
+
+Radiator is an AAA (authentication, authorisation and accounting) software, which provides RADIUS, RadSec, Diameter and TACACS+ protocol implementations. This means Radiator can be used among other things to authenticate SSH as well as Telnet login (shell) sessions with for example username-password or multi-factor authentication via RADIUS/RadSec protocol. The integration to actual login process can be implemented by for example `pam_radius` and SSH servers provided by the operating system.
 
 ## [Database](#database)
 
