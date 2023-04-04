@@ -314,6 +314,21 @@ We are interested in your feedback, both positive and negative, and bug reports.
 ### [How do I submit bug reports?](#bug-report)
 We are interested in your feedback, both positive and negative, and bug reports. Please send them to `info (at) radiatorsoftware.com`. Radiator download access holders are entitled to free upgrades, and we do fix bugs that are reported to us, so if you report a bug, you can expect to get an upgrade with a fix one day.
 
+## [Troubleshooting](#troubleshooting)
+
+### [Problems with Oracle database connection?](#oracle-connection)
+
+Radiator log shows error `ERR: Radius::AuthSQL Apollo: SQL connection to 'dbi:Oracle:dbname' failed: timeout` when trying to use Oracle database.
+
+As the connection is failing with timeout, there are several possibilities where the problem is coming from. The problem can be troubleshooted with following steps:
+
+1. It's possible there is some firewall/routing issue between Radiator and the database. Check with telnet if it is possible to connect to the database IP and port: `telnet <IP> <port>`. The database IP can be usually found from the tnsnames.ora file <https://www.orafaq.com/wiki/Tnsnames.ora>
+2. Database can be slow to respond. Check if there are any problems or errors visible in the DB logs.
+3. Check if something has changed recently that could cause the issue, for example routing, firewalls, DB server/client updates.
+4. Check if there are any other Radiators that are located on the same subnet and can connect to the same DB. If yes, that would indicate the problem is not in the routing or firewalls.
+5. Test with sqlplus <https://www.orafaq.com/wiki/SQL*Plus> if there are any errors when trying to connect from the Radiator server to the DB with sqlplus.
+6. It i spossible to see the traffic between Radiator and the DB with wireshark. For example: `% sudo tcpdump -w oracle.pcap host 172.31.23.114 and tcp port 1525`
+Stop Radiator, start tcpdump in another window and start Radiator, then generate/wait for traffic that tries to use the DB and stop tcpdump. The pcap file should show what, if anything, is exchanged between Radiator and Oracle. If there is no traffic shown on tcpdump it could be that there is a problem with DNS: https://stackoverflow.com/questions/2364588/very-long-sql-connection-opening-time
 
 ## [Security](#security)
 
