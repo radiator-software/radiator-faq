@@ -113,7 +113,7 @@ Multiple database sources can be specified for Radiator. Whenever Radiator conne
 
 See also [How is RADIUS high-availability achieved?](#radius-ha)
 
-### How can I connect to Oracle database? {#oracle-connection}
+### [How can I connect to Oracle database?]() {#oracle-connection}
 
 Connection to Oracle database needs a bit more preparations than some other databases.
 
@@ -130,7 +130,7 @@ After checking prerequisites are met, to enable Oracle support in Perl environme
   * DBI (high-level database abstraction: https://metacpan.org/pod/DBI)
   * DBD::Oracle (low-level database driver: https://metacpan.org/pod/DBD::Oracle)
 
-To configure Radiator for Oracle access, please see the following files in _/opt/radiator/radiator/goodies_ directory for configuration samples:
+To configure Radiator for Oracle access, please see the following files in _/opt/radiator/radiator/goodies_ directory (Windows: directory _\Radiator\Radiator\goodies_ on the drive Radiator is installed on) for configuration samples:
 
   * sql.cfg
   * oracleCreate.sql
@@ -348,7 +348,7 @@ We are interested in your feedback, both positive and negative, and bug reports.
 
 ## Troubleshooting {#troubleshooting}
 
-### Problems with Oracle database connection? {#oracle-connection-problem}
+### [Problems with Oracle database connection?]() {#oracle-connection-problem}
 
 Radiator log shows error `ERR: Radius::AuthSQL Apollo: SQL connection to 'dbi:Oracle:dbname' failed: timeout` when trying to use Oracle database.
 
@@ -359,7 +359,7 @@ As the connection is failing with timeout, there are several possibilities where
 3. Check if something has changed recently that could cause the issue, for example routing, firewalls, DB server/client updates.
 4. Check if there are any other Radiators that are located on the same subnet and can connect to the same DB. If yes, that would indicate the problem is not in the routing or firewalls.
 5. Test with sqlplus <https://www.orafaq.com/wiki/SQL*Plus> if there are any errors when trying to connect from the Radiator server to the DB with sqlplus.
-6. It i spossible to see the traffic between Radiator and the DB with wireshark. For example: `% sudo tcpdump -w oracle.pcap host 172.31.23.114 and tcp port 1525`
+6. It is possible to see the traffic between Radiator and the DB with wireshark. For example: `% sudo tcpdump -w oracle.pcap host 172.31.23.114 and tcp port 1525`
 Stop Radiator, start tcpdump in another window and start Radiator, then generate/wait for traffic that tries to use the DB and stop tcpdump. The pcap file should show what, if anything, is exchanged between Radiator and Oracle. If there is no traffic shown on tcpdump it could be that there is a problem with DNS: https://stackoverflow.com/questions/2364588/very-long-sql-connection-opening-time
 
 
