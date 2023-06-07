@@ -13,6 +13,7 @@ Updated: {{ site.time | date: "%Y-%m-%d" }}
 {:toc}
 </div>
 
+
 ## [General questions](#general)
 
 ### [What is the best RADIUS server?](#best-radius-server)
@@ -93,6 +94,7 @@ Radiator supports all **the most used operating systems** (Unix, Linux, Windows 
 
 Radiator is an AAA (authentication, authorisation and accounting) software, which provides RADIUS, RadSec, Diameter and TACACS+ protocol implementations. This means Radiator can be used among other things to authenticate SSH as well as Telnet login (shell) sessions with for example username-password or multi-factor authentication via RADIUS/RadSec protocol. The integration to actual login process can be implemented by for example `pam_radius` and SSH servers provided by the operating system.
 
+
 ## [Database](#database)
 
 ### [What databases are supported by Radiator?](#database-support)
@@ -111,6 +113,28 @@ Multiple database sources can be specified for Radiator. Whenever Radiator conne
 
 See also [How is RADIUS high-availability achieved?](#radius-ha)
 
+### How can I connect to Oracle database? {#oracle-connection}
+
+Connection to Oracle database needs a bit more preparations than some other databases.
+
+Before configuring Radiator, install and configure the needed Oracle tools and libraries, and test the database connection using Oracle's `sqlplus` command.
+
+For Oracle Instant Client, install the following packages:
+  * The "Basic" package for the essential Oracle libraries.
+  * The "SDK" package for the headers and makefile.
+  * The "SQL*Plus" component is optional, but will help you check your configuration and DBD::Oracle determine your Oracle version.
+
+After checking prerequisites are met, to enable Oracle support in Perl environment, you can install Perl packages
+  * DBI (high-level database abstraction: https://metacpan.org/pod/DBI)
+  * DBD::Oracle (low-level database driver: https://metacpan.org/pod/DBD::Oracle)
+
+To configure Radiator for Oracle access, please see the following files in _/opt/radiator/radiator/goodies_ directory for configuration samples:
+  * sql.cfg
+  * oracleCreate.sql
+
+These files provide a simple example configuration for authentication from SQL-based database, as well as an example on the database structure for simple databases used in AuthBy SQL.
+
+See also [Problems with Oracle database connection?](#oracle-connection-problem)
 
 ## [Installation](#installation)
 
@@ -155,6 +179,7 @@ Radiator offers an evaluation license which allows trying out and testing Radiat
 ### [Can I run Radiator in a Docker container?](#run-docker)
 Radiator can be run in a Docker container. Starting from Radiator 4.25 we have included Dockerfiles with the distribution to make it easier for running Radiator in a container. Check out more details from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-dockerfiles-now-available.html>
 
+
 ## [Configuration](#configuration)
 
 ### [How to configure Radiator](#configration-howto)
@@ -180,6 +205,7 @@ sudo systemctl restart radiator
 Sample files in goodies directory typically show just one topic. To add authentication logging, see _authlog.cfg_ in goodies directory and add the logging specific parts into your _radiator.conf_ file. File `README` in goodies gives a brief description of each goodies file.
 
 Our advice is to start with a simple configuration that can be tested while you add more features to it. See [Configuring Radiator](https://files.radiatorsoftware.com/radiator/ref/Configuration.html) in Radiator reference manual for more information.
+
 
 ## [Deployment](#deployment)
 
@@ -216,7 +242,7 @@ In addition to managing Radiator instances with Ansible, the Radiator instances 
 
 Starting from Radiator 4.25 we have included Radiator Software Ansible playbooks with the distribution for installation, set up, and instance management. These playbooks can be used as is or then as a starting point and tailored for specific needs. See more from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html>
 
-### [How is RADIUS high-availability achieved?](#radius-ha)
+### How is RADIUS high-availability achieved? {#radius-ha}
 
 HA is based on running multiple parallel RADIUS servers (only active-active model is used). The selection of an active RADIUS server or load-balancing of the requests between RADIUS servers is commonly decided by the RADIUS clients. The authentication backend (e.g. LDAP, SQL) redundancy and high availability is provided by the backend and backend drivers, not the RADIUS server.
 
@@ -296,6 +322,7 @@ Radiator is available as an *evaluation version*. You can request a free *30 day
 
 Evaluation software has the *full functionality of Radiator*. The difference is that evaluation software is time limited and requires a licence key to activate, and the source code is obscured.
 
+
 ## [Support](#support)
 
 ### [How can I contact Radiator support?](#contact-support)
@@ -316,7 +343,7 @@ We are interested in your feedback, both positive and negative, and bug reports.
 
 ## [Troubleshooting](#troubleshooting)
 
-### [Problems with Oracle database connection?](#oracle-connection)
+### [Problems with Oracle database connection?](#oracle-connection-problem)
 
 Radiator log shows error `ERR: Radius::AuthSQL Apollo: SQL connection to 'dbi:Oracle:dbname' failed: timeout` when trying to use Oracle database.
 
@@ -329,6 +356,7 @@ As the connection is failing with timeout, there are several possibilities where
 5. Test with sqlplus <https://www.orafaq.com/wiki/SQL*Plus> if there are any errors when trying to connect from the Radiator server to the DB with sqlplus.
 6. It i spossible to see the traffic between Radiator and the DB with wireshark. For example: `% sudo tcpdump -w oracle.pcap host 172.31.23.114 and tcp port 1525`
 Stop Radiator, start tcpdump in another window and start Radiator, then generate/wait for traffic that tries to use the DB and stop tcpdump. The pcap file should show what, if anything, is exchanged between Radiator and Oracle. If there is no traffic shown on tcpdump it could be that there is a problem with DNS: https://stackoverflow.com/questions/2364588/very-long-sql-connection-opening-time
+
 
 ## [Security](#security)
 
