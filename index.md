@@ -359,8 +359,9 @@ As the connection is failing with timeout, there are several possibilities where
 3. Check if something has changed recently that could cause the issue, for example routing, firewalls, DB server/client updates.
 4. Check if there are any other Radiators that are located on the same subnet and can connect to the same DB. If yes, that would indicate the problem is not in the routing or firewalls.
 5. Test with sqlplus <https://www.orafaq.com/wiki/SQL*Plus> if there are any errors when trying to connect from the Radiator server to the DB with sqlplus.
-6. It is possible to see the traffic between Radiator and the DB with tcpdump and Wireshark. For example: `% sudo tcpdump -w oracle.pcap host 172.31.23.114 and tcp port 1525`<br>
-Stop Radiator, start tcpdump in another window and start Radiator, then generate/wait for traffic that tries to use the DB and stop tcpdump. The pcap file should show what, if anything, is exchanged between Radiator and Oracle. If there is no traffic shown on tcpdump it could be that there is a problem with DNS: https://stackoverflow.com/questions/2364588/very-long-sql-connection-opening-time
+6. It is possible to see the traffic between Radiator and the DB with tcpdump and Wireshark. For example:<br>
+`% sudo tcpdump -w oracle.pcap host 172.31.23.114 and tcp port 1525`<br>
+Stop Radiator, start tcpdump in another window and start Radiator, then generate/wait for traffic that tries to use the DB and stop tcpdump. The pcap file should show what, if anything, is exchanged between Radiator and Oracle. If there is no traffic shown on tcpdump it could be that there is a problem with DNS: <https://stackoverflow.com/questions/2364588/very-long-sql-connection-opening-time>
 
 
 ## Security {#security}
