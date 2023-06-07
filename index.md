@@ -127,10 +127,10 @@ For Oracle Instant Client, install the following packages:
 
 After checking prerequisites are met, to enable Oracle support in Perl environment, you can install Perl packages
 
-  * DBI (high-level database abstraction: https://metacpan.org/pod/DBI)
-  * DBD::Oracle (low-level database driver: https://metacpan.org/pod/DBD::Oracle)
+  * DBI (high-level database abstraction: <https://metacpan.org/pod/DBI>)
+  * DBD::Oracle (low-level database driver: <https://metacpan.org/pod/DBD::Oracle>)
 
-To configure Radiator for Oracle access, please see the following files in _/opt/radiator/radiator/goodies_ directory (Windows: directory _\Radiator\Radiator\goodies_ on the drive Radiator is installed on) for configuration samples:
+To configure Radiator for Oracle access, please see the following files in _/opt/radiator/radiator/goodies_ directory (Windows: directory _\Radiator\Radiator\goodies\\_ on the drive Radiator is installed on) for configuration samples:
 
   * sql.cfg
   * oracleCreate.sql
@@ -155,7 +155,7 @@ Installation instructions for various cases are available in our reference manua
 
 ### Where the packages end up on Linux distributions? {#installation-linuxenv}
 
-When Radiator is installed on Linux, several locations are created. Radiator default configuration is available for modifications on _/etc/radiator/radiator.conf_, logs by default go to Radiator log directory _/var/log/radiator/_ and the full source code to _/opt/radiator/_. For full list of all locations created, see installation instructions on Radiator reference manual chapter [Installing and upgrading Radiator](https://files.radiatorsoftware.com/radiator/ref/toc.html), for example [Installing and upgrading on Linux](https://files.radiatorsoftware.com/radiator/ref/Linux-el-rpm-Installation.html#Linux-el-rpm-Installation).
+When Radiator is installed on Linux, several locations are created. Radiator default configuration is available for modifications on _/etc/radiator/radiator.conf_, logs by default go to Radiator log directory _/var/log/radiator/_ and the full source code to _/opt/radiator/_. For full list of all locations created, see installation instructions on [Radiator reference manual](https://files.radiatorsoftware.com/radiator/ref/) chapter [Installing and upgrading Radiator](https://files.radiatorsoftware.com/radiator/ref/Installation.html), for example [on Red Hat Enterprise Linux and variants using RPM](https://files.radiatorsoftware.com/radiator/ref/Installation.html#Linux-el-rpm-Installation).
 
 The Radiator goodies which has several example configurations is available in _/opt/radiator/radiator/goodies/_
 
