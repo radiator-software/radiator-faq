@@ -14,48 +14,48 @@ Updated: {{ site.time | date: "%Y-%m-%d" }}
 </div>
 
 
-## [General questions](#general)
+## General questions {#general}
 
-### [What is the best RADIUS server?](#best-radius-server)
+### What is the best RADIUS server? {#best-radius-server}
 
 From our point of view, Radiator AAA Server is the best choice for **RADIUS**, **Diameter** and other **AAA** server needs. Because of the flexibility of Radiator, our customers call it the *Swiss Army knife of RADIUS servers*. More info on Radiator can be found from Radiator product site <https://radiatorsoftware.com/products/radiator/>
 
-### [Is Radiator open source?](#is-radiator-open-source)
+### Is Radiator open source? {#is-radiator-open-source}
 
 Radiator is not open source, but when you purchase Radiator, full source code is always supplied.
 
-### [How much does Radiator cost?](#how-much-radiator-cost)
+### How much does Radiator cost? {#how-much-radiator-cost}
 
 You can see selected Radiator licence prices at <https://radiatorsoftware.com/pricelist/>. Pricing for the Radiator add-on modules is provided upon request by contacting Radiator sales.
 
-### [Who is using Radiator?](#who-is-using-radiator)
+### Who is using Radiator? {#who-is-using-radiator}
 
 Radiator AAA server is used for user and network authentication by a huge range of different organisations: educational institutions, cities, governmental organisations, ISPs and telecom companies, managed service providers, utility companies, and private businesses in various fields such as hospitality, finance, defence and medical industries.
 
-### [References](#references)
+### References {#references}
 
 Radiator has a large and active worldwide customer base. Please see our website for customer references: <https://radiatorsoftware.com/customers/> and <https://radiatorsoftware.com/use-cases/>
 
-### [Is there an online demo available?](#online-demo)
+### Is there an online demo available? {#online-demo}
 
 There is a Radiator Demo Cloud online demo - you can book a timeslot to go through typical Radiator use cases (or possibly your own use case) with Radiator experts.
 
-### [Where is the Radiator team based?](#radiator-team-based)
+### Where is the Radiator team based? {#radiator-team-based}
 
 The Radiator team is based in Finland, where development and sales are done. At the same time, we also have a worldwide partner network providing support and consultation.
 
-### [Who is behind Radiator?](#who-is-behind-radiator)
+### Who is behind Radiator? {#who-is-behind-radiator}
 
 Radiator was developed by Australian-based *Open System Consultants (OSC)* 1998-2013, until the Finnish team acquired OSC in 2013 and took over Radiator development and business. The resulting company is Radiator Software.
 
-### [Who is the manufacturer for Radiator?](#manufacturer-for-radiator)
+### Who is the manufacturer for Radiator? {#manufacturer-for-radiator}
 
 *Radiator Software Oy* is the sole manufacturer of Radiator AAA Server software. *Radiator Software* sells Radiator licences globally and you can buy a licence directly from the Radiator team. Radiator licences are also sold through various distribution partners all over the world.
 
 
-## [Features](#features)
+## Features {#features}
 
-### [Which RFCs, protocols and authentication methods are supported by Radiator?](#rfcs-protocols-and-authentication-methods)
+### Which RFCs, protocols and authentication methods are supported by Radiator? {#rfcs-protocols-and-authentication-methods}
 
 Full list can be seen from our technical documentation, but short listing is here:
 
@@ -86,26 +86,26 @@ Full list can be seen from our technical documentation, but short listing is her
 - Diameter 3GPP PCRF, PCEF, OCS, and other Diameter and RADIUS related policy and charging features are available through Radiator Telco Pack
 - Complies with 3GPP2 P.S0001-A Wireless IP Network Standard up to version 3GPP X.S0011
 
-### [What platforms are supported by Radiator?](#supported-platforms)
+### What platforms are supported by Radiator? {#supported-platforms}
 
 Radiator supports all **the most used operating systems** (Unix, Linux, Windows and Mac OS). For a complete list for different operating systems and for example Linux distributions, please see <https://radiatorsoftware.com/supported-platforms/>
 
-### [I know I can use telnet, but can I use ssh?](#telnet-ssh)
+### I know I can use telnet, but can I use ssh? {#telnet-ssh}
 
 Radiator is an AAA (authentication, authorisation and accounting) software, which provides RADIUS, RadSec, Diameter and TACACS+ protocol implementations. This means Radiator can be used among other things to authenticate SSH as well as Telnet login (shell) sessions with for example username-password or multi-factor authentication via RADIUS/RadSec protocol. The integration to actual login process can be implemented by for example `pam_radius` and SSH servers provided by the operating system.
 
 
-## [Database](#database)
+## Database {#database}
 
-### [What databases are supported by Radiator?](#database-support)
+### What databases are supported by Radiator? {#database-support}
 
 Radiator supports SQL and LDAP databases. Database support includes a wide selection of popular databases, including but not limited to MySQL, MariaDB, Oracle, PostgreSQL, Microsoft SQL Server, and Active Directory, OpenLDAP, etc.
 
-### [Why is there no database included?](#internal-database)
+### Why is there no database included? {#internal-database}
 
 Radiator doesn't include its own database, as it is designed to be integrated with existing databases so that customer's data, and database tools and frontends can be utilised without duplicating information to different systems. This saves effort as there is no need to manage and backup several different databases, and for example user data can be edited with familiar tools by non-technical staff.
 
-### [How is database HA ensured?](#database-ha)
+### How is database HA ensured? {#database-ha}
 
 Radiator leverages customer's existing database infrastructure. High-availability is achieved through database backend's own mechanics and tools, be it a redundant server in next cabinet or n-way replication on different datacenters.
 
@@ -120,15 +120,18 @@ Connection to Oracle database needs a bit more preparations than some other data
 Before configuring Radiator, install and configure the needed Oracle tools and libraries, and test the database connection using Oracle's `sqlplus` command.
 
 For Oracle Instant Client, install the following packages:
+
   * The "Basic" package for the essential Oracle libraries.
   * The "SDK" package for the headers and makefile.
   * The "SQL*Plus" component is optional, but will help you check your configuration and DBD::Oracle determine your Oracle version.
 
 After checking prerequisites are met, to enable Oracle support in Perl environment, you can install Perl packages
+
   * DBI (high-level database abstraction: https://metacpan.org/pod/DBI)
   * DBD::Oracle (low-level database driver: https://metacpan.org/pod/DBD::Oracle)
 
 To configure Radiator for Oracle access, please see the following files in _/opt/radiator/radiator/goodies_ directory for configuration samples:
+
   * sql.cfg
   * oracleCreate.sql
 
@@ -136,13 +139,13 @@ These files provide a simple example configuration for authentication from SQL-b
 
 See also [Problems with Oracle database connection?](#oracle-connection-problem)
 
-## [Installation](#installation)
+## Installation {#installation}
 
-### [Perl versions](#installation-perl)
+### Perl versions {#installation-perl}
 
 Radiator requires Perl 5.8.8 or newer to function. Radiator is written entirely in Perl and is therefore highly portable. We also provide full source code. Many Unix distributions include Perl as part of the standard installation. Common Windows Perl distributions include ActivePerl and Strawberry Perl. For easy deployment on Windows environments, the Radiator MSI package contains a Strawberry Perl portable version.
 
-### [How do I install Radiator?](#installation-radiator)
+### How do I install Radiator? {#installation-radiator}
 
 Radiator offers a wide selection of installation packages in various formats, for example RPM, deb and MSI. In case a suitable format is not available, Radiator can also be installed from the archive package. In addition of Radiator releases, we also have testing packages available. Testing packages contain changes planned for the next Radiator release.
 
@@ -150,13 +153,13 @@ Radiator installation packages are available for download and also from our repo
 
 Installation instructions for various cases are available in our reference manual chapter [Installing and upgrading Radiator](https://files.radiatorsoftware.com/radiator/ref/toc.html) as well in our web pages <https://radiatorsoftware.com/products/radiator/installation/>
 
-### [Where the packages end up on Linux distributions?](#installation-linuxenv)
+### Where the packages end up on Linux distributions? {#installation-linuxenv}
 
 When Radiator is installed on Linux, several locations are created. Radiator default configuration is available for modifications on _/etc/radiator/radiator.conf_, logs by default go to Radiator log directory _/var/log/radiator/_ and the full source code to _/opt/radiator/_. For full list of all locations created, see installation instructions on Radiator reference manual chapter [Installing and upgrading Radiator](https://files.radiatorsoftware.com/radiator/ref/toc.html), for example [Installing and upgrading on Linux](https://files.radiatorsoftware.com/radiator/ref/Linux-el-rpm-Installation.html#Linux-el-rpm-Installation).
 
 The Radiator goodies which has several example configurations is available in _/opt/radiator/radiator/goodies/_
 
-### [Where the packages end up on Windows environment?](#installation-winenv)
+### Where the packages end up on Windows environment? {#installation-winenv}
 
 When Radiator is installed on Windows, the installation package automatically uses the disk with the most space available. The exact installation location is shown on the installation dialog once the installation is finished. Radiator is installed to the _\Radiator\Radiator\\_ directory, for example if E drive was used the location would be _E:\Radiator\Radiator\\_. The Radiator MSI package also includes Strawberry Perl, which is installed to the _\Radiator\StrawberryPerl-Radiator\\_ directory. The Radiator default configuration and default log directory is _\Program Files\Radiator\\_ directory.
 
@@ -164,7 +167,7 @@ The Radiator goodies which has several example configurations is available in _\
 
 See more from Radiator reference manual chapter [Installing and upgrading on Windows](https://files.radiatorsoftware.com/radiator/ref/Windows.html).
 
-### [Where to add licence key (evaluations)?](#installation-evaluationlicense)
+### Where to add licence key (evaluations)? {#installation-evaluationlicense}
 
 Radiator offers an evaluation license which allows trying out and testing Radiator easily. With the evaluation version, the license key must be available in the Radiator configuration. The license key contents can be copied directly to the Radiator configuration, but the recommended option is to have the license information as a separate file, which is then included in the Radiator configuration.
 
@@ -176,18 +179,18 @@ Radiator offers an evaluation license which allows trying out and testing Radiat
 ``` 
 - Once the lines are added to the Radiator configuration, Radiator must be restarted so the new content of the license file is read. Use `systemctl restart radiator` on Linux environments or restart Radiator service from Services on Windows environments.
 
-### [Can I run Radiator in a Docker container?](#run-docker)
+### Can I run Radiator in a Docker container? {#run-docker}
 Radiator can be run in a Docker container. Starting from Radiator 4.25 we have included Dockerfiles with the distribution to make it easier for running Radiator in a container. Check out more details from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-dockerfiles-now-available.html>
 
 
-## [Configuration](#configuration)
+## Configuration {#configuration}
 
-### [How to configure Radiator](#configration-howto)
+### How to configure Radiator {#configration-howto}
 
 When Radiator starts, it reads its configuration from a file. This configuration file is typically named _/etc/radiator/radiator.conf_ and it can be edited with a text editor. Radiator configuration files can include additional parts of configuration from one or many other files. On Windows the Radiator configuration goes to
 _\Program Files\Radiator\\_ folder.
 
-### [Where can I find Radiator sample configurations?](#configuration-samples)
+### Where can I find Radiator sample configurations? {#configuration-samples}
 
 When you install Radiator from a .deb or a .RPM archive, see directory _/opt/radiator/radiator/goodies/_. This directory has configuration samples, some utility programs and other configuration related files. On Windows, see _\Radiator\Radiator\goodies\\_ on the drive Radiator installs on.
 
@@ -207,13 +210,13 @@ Sample files in goodies directory typically show just one topic. To add authenti
 Our advice is to start with a simple configuration that can be tested while you add more features to it. See [Configuring Radiator](https://files.radiatorsoftware.com/radiator/ref/Configuration.html) in Radiator reference manual for more information.
 
 
-## [Deployment](#deployment)
+## Deployment {#deployment}
 
-### [Does Radiator offer repositories?](#radiator-repositories)
+### Does Radiator offer repositories? {#radiator-repositories}
 
 Radiator repositories are available for various Unix/Linux distributions like RedHat, Ubuntu and Debian. See more from our blog <https://blog.radiatorsoftware.com/2020/03/introducing-new-radiator-repository.html>
 
-### [How do I deploy Radiator?](#deploying-radiator)
+### How do I deploy Radiator? {#deploying-radiator}
 
 Radiator can be deployed in multiple ways. We offer both repositories as well as ready made packages for various platforms. For other systems we have the tar.gz package available.
 
@@ -224,13 +227,13 @@ Both repositories and ready made packages can also be used when deploying Radiat
 For manual Radiator package deployment, see our installation instructions from <https://radiatorsoftware.com/products/radiator/installation/>
 
 
-## [Management](#management)
+## Management {#management}
 
-### [How do I manage Radiator instances on multiple hosts?](#instances-multiple-hosts)
+### How do I manage Radiator instances on multiple hosts? {#instances-multiple-hosts}
 
 Radiator instances on multiple hosts can be managed with Ansible playbooks available in Radiator distribution packages from Radiator 4.25. The Radiator Software Ansible playbooks offer a more automated way to manage Radiator installation, set up, and instance management and they can be either used as is or tailored when needed. See more from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html>
 
-### [How do I manage Radiator instances on a single host?](#instances-single-host)
+### How do I manage Radiator instances on a single host? {#instances-single-host}
 
 Multiple Radiator instances on a single host can be managed either with Ansible playbooks available in Radiator distribution packages from Radiator 4.25 or with systemd.
 
@@ -238,7 +241,7 @@ The Radiator Software Ansible playbooks offer a more automated way to manage Rad
 
 In addition to managing Radiator instances with Ansible, the Radiator instances running on the same host can be managed manually with systemd. We also offer a systemd service file which allows grouping the Radiator instances. Once grouped, all Radiator instances on the host can be controlled with a single systemctl command. Check out instructions for set up and usage from our blog: <https://blog.radiatorsoftware.com/2019/06/grouping-and-controlling-multiple.html>
 
-### [Can I use Ansible?](#ansible-management)
+### Can I use Ansible? {#ansible-management}
 
 Starting from Radiator 4.25 we have included Radiator Software Ansible playbooks with the distribution for installation, set up, and instance management. These playbooks can be used as is or then as a starting point and tailored for specific needs. See more from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html>
 
@@ -246,7 +249,7 @@ Starting from Radiator 4.25 we have included Radiator Software Ansible playbooks
 
 HA is based on running multiple parallel RADIUS servers (only active-active model is used). The selection of an active RADIUS server or load-balancing of the requests between RADIUS servers is commonly decided by the RADIUS clients. The authentication backend (e.g. LDAP, SQL) redundancy and high availability is provided by the backend and backend drivers, not the RADIUS server.
 
-### [How to implement HA and redundancy in Radiator?](#radius-ha-implementation)
+### How to implement HA and redundancy in Radiator? {#radius-ha-implementation}
 
 High-availability is a combined result of proper:
 
@@ -261,9 +264,9 @@ High-availability is a combined result of proper:
 Without considering all of these together, the RADIUS infrastructure high-availability and redundancy cannot be ensured.
 
 
-## [Monitoring](#monitoring)
+## Monitoring {#monitoring}
 
-### [How SNMP is supported in Radiator?](#monitoring-snmp)
+### How SNMP is supported in Radiator? {#monitoring-snmp}
 
 Radiator includes SNMP agent support. The agent supports SNMP versions 1 and 2c and all the SNMP objects described in the following RFCs:
 
@@ -272,31 +275,31 @@ Radiator includes SNMP agent support. The agent supports SNMP versions 1 and 2c 
 - RFC [4669](https://datatracker.ietf.org/doc/html/rfc4669) - RADIUS Authentication Server MIB for IPv6
 - RFC [4671](https://datatracker.ietf.org/doc/html/rfc4671) - RADIUS Accounting Server MIB for IPv6
 
-### [How can I monitor Radiator?](#monitoring-how)
+### How can I monitor Radiator? {#monitoring-how}
 
 Radiator monitoring can be done with the information available in various log files. The recommended approach is to log the information in suitable format, for example JSON and then visualise the information with a 3rd party tool like Splunk or Elasticsearch. See more from our blog: [Make your Radiator log data searchable, part 1](https://blog.radiatorsoftware.com/2016/06/make-your-radiator-log-data-searchable.html) and [part 2](https://blog.radiatorsoftware.com/2016/09/make-your-radiator-log-data-searchable.html).
 
-### [Is there a dashboard?](#monitoring-dashboard)
+### Is there a dashboard? {#monitoring-dashboard}
 
 Radiator is a command line application and does not contain a dashboard itself. Due to the many options Radiator has for logging and statistics collection, creating a suitable dashboard with e.g. Splunk is possible.
 
-### [How do I integrate external monitoring solutions with Radiator?](#monitoring-external)
+### How do I integrate external monitoring solutions with Radiator? {#monitoring-external}
 
 Simple way to integrate for example Splunk with Radiator is to log statistics information from Radiator to a JSON file with `<StatsLog FILE>`, and then use for example Splunk Universal Forwarder or a custom script to forward the needed statistics to Splunk. Similarly it is possible to integrate for example Kibana with Radiator. See more from our blog: <https://blog.radiatorsoftware.com/2016/09/make-your-radiator-log-data-searchable.html>
 
 
-## [Logging](#logging)
+## Logging {#logging}
 
-### [What logging formats Radiator supports?](#logging-formats)
+### What logging formats Radiator supports? {#logging-formats}
 
 Radiator has a default logging format, which can be configured either with Radiator configuration parameter `LogFormat` or with a Perl hook called `LogFormatHook`. In addition, Radiator supports JSON and CEF log formats by default. Radiator goodies directory has an example on how to configure different log formats in file _logformat.cfg_
 
-### [Where does Radiator logging go?](#logging-options)
+### Where does Radiator logging go? {#logging-options}
 
 Radiator has several options for logging. Logs can go to a flat file on Radiator server, to a SQL database, to syslog logging facility or in case of Microsoft Windows logs can go to Microsoft Windows Event Log. Statistics can also be logged to REDIS.
 Although Radiator can log directly to remote syslog facility/facilities, it can have performance impact on Radiator. So from performance point it is better to log to SYSLOG on the local Radiator host and then have SYSLOG itself forward logs to remote syslog facilities.
 
-### [How do I configure Radiator logs?](#logging-configure)
+### How do I configure Radiator logs? {#logging-configure}
 
 Each Radiator log can be configured with Radiator configuration. Radiator can log authentication, accounting and general Radiator related information. Radiator configuration can have several different logging clauses defined at the same time. For example it is possible to log authentication to both file (`<AuthLog FILE>`) and SQL (`<AuthLog SQL>`) while at the same time logging accounting to file (`<AcctLog FILE>`), SQL (`<AcctLog SQL>`) and SYSLOG (`<AcctLog SYSLOG>`). All the same options apply also to Radiator general logs with clauses like `<Log FILE>` and `<Log SYSLOG>` and for statistics with clauses like `<StatsLog FILE>` and `<StatsLog REDIS>`.
 Radiator goodies directory has an example on how to configure several different logs in file _logformat.cfg_
@@ -304,9 +307,9 @@ Radiator goodies directory has an example on how to configure several different 
 Default configuration for log rorate is automatically configured by Radiator during installation. It is available in _/etc/logrotate.d/radiator_ and can be edited when needed.
 
 
-## [Licensing](#licencing)
+## Licensing {#licensing}
 
-### [How Radiator licensing works?](#how-radiator-licencing-works)
+### How Radiator licensing works? {#how-radiator-licensing-works}
 
 Radiator licensing is based on the number of servers used by the customer organisation. Radiator is available in different licence sizes starting from single server **Radiator Single Pack** and up to unlimited server count **Radiator Enterprise Pack**.
 
@@ -314,36 +317,38 @@ Radiator can be extended with **Radiator Service Provider Pack**, **Radiator SIM
 
 Other flexible licensing options are also available. Please contact Radiator sales if you’re interested in **service provider** licensing, **VNF** licensing, **white-label OEM** licensing or other models.
 
-### [Is there a demo version of Radiator?](#demo-version-of-radiator)
+### Is there a demo version of Radiator? {#demo-version-of-radiator}
 
 Radiator is available as an *evaluation version*. You can request a free *30 day evaluation licence* by filling out our evaluation form: <https://radiatorsoftware.com/evaluation/>
 
-### [What is the difference between the fully licensed and demo versions?](#difference-between-fully-licensed-and-demo-versions)
+### What is the difference between the fully licensed and demo versions?{#difference-between-fully-licensed-and-demo-versions}
 
 Evaluation software has the *full functionality of Radiator*. The difference is that evaluation software is time limited and requires a licence key to activate, and the source code is obscured.
 
 
-## [Support](#support)
+## Support {#support}
 
-### [How can I contact Radiator support?](#contact-support)
+### How can I contact Radiator support? {#contact-support}
 
 If you have a support contract, you may send email to radius-support (at) open.com.au. Include your support contract identifier in the Subject line. This email address is reserved for support contract holders only. For the detailed information about contacting support, please see <https://radiatorsoftware.com/support/>
 
-### [What support options are available?](#support-options)
+### What support options are available? {#support-options}
 
 Radiator license package may include email support and telephone support. It's also possible to purchase additional support packages, including consulting, training and custom coding. For more information about paid support, please see <https://radiatorsoftware.com/support/>
 
 Latest Radiator reference manual and other information is available at <https://radiatorsoftware.com/products/radiator/>
 
-### [How to submit feature requests?](#feature-request)
+### How to submit feature requests? {#feature-request}
+
 We are interested in your feedback, both positive and negative, and bug reports. Please send them to `info (at) radiatorsoftware.com`.
 
-### [How do I submit bug reports?](#bug-report)
+### How do I submit bug reports? {#bug-report}
+
 We are interested in your feedback, both positive and negative, and bug reports. Please send them to `info (at) radiatorsoftware.com`. Radiator download access holders are entitled to free upgrades, and we do fix bugs that are reported to us, so if you report a bug, you can expect to get an upgrade with a fix one day.
 
-## [Troubleshooting](#troubleshooting)
+## Troubleshooting {#troubleshooting}
 
-### [Problems with Oracle database connection?](#oracle-connection-problem)
+### Problems with Oracle database connection? {#oracle-connection-problem}
 
 Radiator log shows error `ERR: Radius::AuthSQL Apollo: SQL connection to 'dbi:Oracle:dbname' failed: timeout` when trying to use Oracle database.
 
@@ -358,19 +363,19 @@ As the connection is failing with timeout, there are several possibilities where
 Stop Radiator, start tcpdump in another window and start Radiator, then generate/wait for traffic that tries to use the DB and stop tcpdump. The pcap file should show what, if anything, is exchanged between Radiator and Oracle. If there is no traffic shown on tcpdump it could be that there is a problem with DNS: https://stackoverflow.com/questions/2364588/very-long-sql-connection-opening-time
 
 
-## [Security](#security)
+## Security {#security}
 
-### [Can I audit Radiator AAA Server source code?](#code-audit)
+### Can I audit Radiator AAA Server source code? {#code-audit}
 
 We provide full source code for licensees so code can be audited, and it's easy to track any changes between versions.
 
-### [How do I submit security issues / questions?](#security-issues)
+### How do I submit security issues / questions? {#security-issues}
 
 All security related issues concerning Radiator Software products or services should be reported to the following email address: `security (at) radiatorsoftware.com`
 
 You can find more information on page <https://radiatorsoftware.com/security-contacts/>
 
-### [How can I validate the software downloads?](#validate-downloads)
+### How can I validate the software downloads? {#validate-downloads}
 
 All Radiator Software software packages are signed with a Radiator Software key. You can download the key from <https://radiatorsoftware.com/product-signing-keys/>
 and use it to verify the authenticity of the downloaded packages. When using Radiator Software supplied repositories, this verification is done automatically upon install or upgrade.
