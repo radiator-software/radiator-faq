@@ -2,7 +2,7 @@
 ---
 
 <div id="radiator-links" style="font-weight: bolder;" markdown="1">
-[Radiator Software ↗](https://radiatorsoftware.com/) &nbsp;&nbsp;&nbsp;&nbsp;
+[Radiator Software ↗](https://radiatorsoftware.com/) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [Radiator AAA Server ↗](https://radiatorsoftware.com/products/radiator/)
 </div>
 
@@ -18,7 +18,7 @@ Updated: {{ site.time | date: "%Y-%m-%d" }}
 
 ### What is the best RADIUS server? {#best-radius-server}
 
-From our point of view, Radiator AAA Server is the best choice for **RADIUS**, **Diameter** and other **AAA** server needs. Because of the flexibility of Radiator, our customers call it the *Swiss Army knife of RADIUS servers*. More info on Radiator can be found from Radiator product site <https://radiatorsoftware.com/products/radiator/>
+From our point of view, Radiator AAA Server is the best choice for **RADIUS**, **RadSec**, **Diameter**, **TACACS+** and other **AAA** server needs. Because of the flexibility of Radiator, our customers call it the *Swiss Army knife of RADIUS servers*. More info on Radiator can be found from Radiator product site <https://radiatorsoftware.com/products/radiator/>
 
 ### Is Radiator open source? {#is-radiator-open-source}
 
@@ -117,7 +117,7 @@ See also [How is RADIUS high-availability achieved?](#radius-ha)
 
 Connection to Oracle database needs a bit more preparations than some other databases.
 
-Before configuring Radiator, install and configure the needed Oracle tools and libraries, and test the database connection using Oracle's `sqlplus` command.
+Before configuring Radiator, install and configure the needed Oracle tools and libraries, and test the database connection using Oracle's sqlplus tool.
 
 For Oracle Instant Client, install the following packages:
 
@@ -147,11 +147,11 @@ Radiator requires Perl 5.8.8 or newer to function. Radiator is written entirely 
 
 ### How do I install Radiator? {#installation-radiator}
 
-Radiator offers a wide selection of installation packages in various formats, for example RPM, deb and MSI. In case a suitable format is not available, Radiator can also be installed from the archive package. In addition of Radiator releases, we also have testing packages available. Testing packages contain changes planned for the next Radiator release.
+Radiator offers a wide selection of installation packages in various formats, for example RPM, deb and MSI. In case a suitable format is not available, Radiator can also be installed from the source archive package. In addition of Radiator releases, we also have testing packages available. Testing packages contain changes planned for the next Radiator release.
 
-Radiator installation packages are available for download and also from our repositories.
+Radiator installation packages are available for manual download from Radiator Software downloads site <https://downloads.radiatorsoftware.com/packages/> (credentials needed), and RPM and deb packages can also be installed from our repositories <https://downloads.radiatorsoftware.com/repo/> (credentials or repository key needed).
 
-Installation instructions for various cases are available in our reference manual chapter [Installing and upgrading Radiator](https://files.radiatorsoftware.com/radiator/ref/toc.html) as well in our web pages <https://radiatorsoftware.com/products/radiator/installation/>
+Installation instructions for various cases are available in [Radiator reference manual](https://files.radiatorsoftware.com/radiator/ref/) chapter [Installing and upgrading Radiator](https://files.radiatorsoftware.com/radiator/ref/Installation.html), as well in our web pages <https://radiatorsoftware.com/products/radiator/installation/>
 
 ### Where the packages end up on Linux distributions? {#installation-linuxenv}
 
