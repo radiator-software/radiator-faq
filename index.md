@@ -169,15 +169,26 @@ See more from Radiator reference manual chapter [Installing and upgrading on Win
 
 ### Where to add licence key (evaluations)? {#installation-evaluationlicense}
 
-Radiator offers an evaluation license which allows trying out and testing Radiator easily. With the evaluation version, the license key must be available in the Radiator configuration. The license key contents can be copied directly to the Radiator configuration, but the recommended option is to have the license information as a separate file, which is then included in the Radiator configuration.
+Radiator Software offers an evaluation license which allows trying out and testing Radiator AAA server easily. With the evaluation version, the license key must be available in the Radiator configuration.
 
-- First copy the license key carefully to the Radiator server under _/etc/radiator_ on Linux environments or _\Program Files\Radiator\\_ on Windows environments.
-- Then edit the Radiator configuration usually located in the same directory to include the license file by adding to the Radiator configuration the lines. These lines should be located in the upper part of the Radiator configuration, but not before `DbDir` definition. A good place is right after the `LogFile` definition but before the `DictionaryFile` definition.
+When starting Radiator server process you may find the following line in logs indicating that the license key is not valid:
+
 ```
+ERR: Your Radiator license has expired or the licensed maximum request count has been reached
+```
+
+The license key details provided by Radiator Software can be copied directly to the Radiator configuration, but the recommended option is to have the license information as a separate file, which is then included in the Radiator configuration.
+
+- First copy your license key details to the Radiator host, target file name `license.conf` under directory `/etc/radiator` on Linux environments or `\Program Files\Radiator\` on Windows environments.
+- Then check the Radiator configuration file `radiator.conf` usually located in the same directory. Make sure (and edit if needed) that the file includes lines with `DbDir` and `LicenseFile` near the top of the Radiator configuration, before the `DictionaryFile` definition.
+```
+  # Additional configuration files go to DbDir.
+  # On Windows, replace /etc/radiator for example with C:\Program Files\Radiator
+  DbDir       /etc/radiator
   # Read possible license configuration parameters from this file
   LicenseFile %D/license.conf
 ``` 
-- Once the lines are added to the Radiator configuration, Radiator must be restarted so the new content of the license file is read. Use `systemctl restart radiator` on Linux environments or restart Radiator service from Services on Windows environments.
+- Once the license key is added to the Radiator configuration, Radiator server process must be restarted so that the new content of the license file is read. Use `systemctl restart radiator` on Linux environments or restart Radiator service from Services on Windows environments.
 
 ### Can I run Radiator in a Docker container? {#run-docker}
 Radiator can be run in a Docker container. Starting from Radiator 4.25 we have included Dockerfiles with the distribution to make it easier for running Radiator in a container. Check out more details from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-dockerfiles-now-available.html>
@@ -321,7 +332,7 @@ Other flexible licensing options are also available. Please contact Radiator sal
 
 Radiator is available as an *evaluation version*. You can request a free *30 day evaluation licence* by filling out our evaluation form: <https://radiatorsoftware.com/evaluation/>
 
-### What is the difference between the fully licensed and demo versions?{#difference-between-fully-licensed-and-demo-versions}
+### What is the difference between the fully licensed and demo versions? {#difference-between-fully-licensed-and-demo-versions}
 
 Evaluation software has the *full functionality of Radiator*. The difference is that evaluation software is time limited and requires a licence key to activate, and the source code is obscured.
 
