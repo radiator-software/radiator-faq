@@ -193,6 +193,11 @@ The license key details provided by Radiator Software can be copied directly to 
 ### Can I run Radiator in a Docker container? {#run-docker}
 Radiator can be run in a Docker container. Starting from Radiator 4.25 we have included Dockerfiles with the distribution to make it easier for running Radiator in a container. Check out more details from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-dockerfiles-now-available.html>
 
+### Migrating Radiator to a new server {#installation-migrate}
+Migrating Radiator to a new server is simple. First set up the new server so it has access to any needed services like databases, active directories, log services etc. and configure the new server firewall settings as needed. Once the networking side is prepared, install Radiator to the new server from deb/RPM/MSI package. Copy the existing configuration files from the old server over to the new server. If the Radiator on the new server is newer version, check if the configuration requires any changes based on the revision history: <https://radiatorsoftware.com/products/radiator/history/>. Once all the configuration files have been copied over from the old server, restart Radiator service.
+
+After the restart check the Radiator process log file, usually named radiator.log and located under _/var/log/radiator/_ on Linux or _C:\Program Files\Radiator\\_ on Windows, for any errors that might appear. Also keep an eye on the Radiator process log file when the traffic is starting to come to the new server. For example there could be manually installed additional Perl packages on the old server that haven't been installed to the new server and such missing package would show up in the log. During the migration it is recommended to have at least `Trace 3` enabled on the Radiator configuration if the `Trace 4` (debug) level is not possible. This will ensure smooth migration as the Radiator process log can be used to identify possible issues with the new server. See more about the log levels from Radiator reference manual: <https://files.radiatorsoftware.com/radiator/ref/GlobalParameters.html#Trace>
+
 
 ## Configuration {#configuration}
 
