@@ -387,6 +387,14 @@ We are interested in your feedback, both positive and negative, and bug reports.
 
 ## Troubleshooting {#troubleshooting}
 
+### How to enable debug logging? {#enable-debug}
+
+To enable the DEBUG level log of Radiator, do the following:
+
+1. From the Radiator configuration file, locate the row starting with `Trace` and change the row to contain `Trace 4`. See more about the log levels: <https://files.radiatorsoftware.com/radiator/ref/GlobalParameters.html#Trace>
+2. If the Radiator configuration does not already contain `LogTraceId` and `LogMicroseconds` add those to the configuration also. These are good values to have in the Radiator configuration even when logging level is lower than DEBUG. Good place to add them is right after the `Trace` row. See more from: <https://files.radiatorsoftware.com/radiator/ref/GlobalParameters.html#LogTraceId_common> and <https://files.radiatorsoftware.com/radiator/ref/GlobalParameters.html#LogMicroseconds>.
+3. Restart Radiator so the configuration changes are taken into use. Use `sudo systemctl restart radiator` on Linux environments or restart Radiator service from Services on Windows environments.
+
 ### Problems with Oracle database connection? {#oracle-connection-problem}
 
 Radiator log shows error `ERR: Radius::AuthSQL Apollo: SQL connection to 'dbi:Oracle:dbname' failed: timeout` when trying to use Oracle database.
