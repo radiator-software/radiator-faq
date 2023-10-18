@@ -105,6 +105,10 @@ Radiator supports SQL and LDAP databases. Database support includes a wide selec
 
 Radiator doesn't include its own database, as it is designed to be integrated with existing databases so that customer's data, and database tools and frontends can be utilised without duplicating information to different systems. This saves effort as there is no need to manage and backup several different databases, and for example user data can be edited with familiar tools by non-technical staff.
 
+### Should database be located on the same server as Radiator? {#database-location}
+
+The basic recommendation is that Radiator and database are on different servers. If they are located on the same server, there can be performance issues if the RADIUS requests and database are using the same resources. When the database and Radiator are on different servers, the network devices between must be configured in a way that allows Radiator to access the database.
+
 ### How is database HA ensured? {#database-ha}
 
 Radiator leverages customer's existing database infrastructure. High-availability is achieved through database backend's own mechanics and tools, be it a redundant server in next cabinet or n-way replication on different datacenters.
@@ -205,6 +209,12 @@ After the restart check the Radiator process log file, usually named radiator.lo
 
 When Radiator starts, it reads its configuration from a file. This configuration file is typically named _/etc/radiator/radiator.conf_ and it can be edited with a text editor. Radiator configuration files can include additional parts of configuration from one or many other files. On Windows the Radiator configuration goes to
 _\Program Files\Radiator\\_ folder.
+
+### Where can I find Radiator reference manual? {#configuration-manual}
+
+Latest Radiator reference manual is available on our web pages, both in HTML: <https://files.radiatorsoftware.com/radiator/ref/index.html> and PDF format: <https://files.radiatorsoftware.com/radiator/ref.pdf>.
+
+The PDF manual is also available on the disk after Radiator has been installed from a .deb or a .RPM archive, see directory _/opt/radiator/radiator/doc/_. On Windows, see _\Radiator\Radiator\doc\\_ on the drive Radiator installs on.
 
 ### Where can I find Radiator sample configurations? {#configuration-samples}
 
