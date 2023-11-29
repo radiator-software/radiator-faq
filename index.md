@@ -250,9 +250,9 @@ With the NAS devices, all of the above must be also taken into account, so the N
 
 ### WiFi offloading and test requirements with EAP-AKA {#configuration-wifioffload}
 When testing for example WiFi offload with EAP-AKA, Radiator add-on modules are required as well as Diameter peering information for Radiator <--> HSS/DRA connection. In practise this requires first installing needed software:
-- Radiator and Radiator Radius::UtilXS (https://files.radiatorsoftware.com/radiator/ref/Installation.html#Installation)
-- Radiator Service Provider Module (https://files.radiatorsoftware.com/carrier/ref/Installing.html#Installing)
-- Radiator SIM Module (https://files.radiatorsoftware.com/eap-sim/ref/InstallingSIMPack.html#InstallingSIMPack)
+- Radiator and Radiator Radius::UtilXS <https://files.radiatorsoftware.com/radiator/ref/Installation.html#Installation>
+- Radiator Service Provider Module <https://files.radiatorsoftware.com/carrier/ref/Installing.html#Installing>
+- Radiator SIM Module <https://files.radiatorsoftware.com/eap-sim/ref/InstallingSIMPack.html#InstallingSIMPack>
 
 After the software has been installed, next steps are creating the Radiator configuration and acquiring for example test SIM cards. Check out <https://files.radiatorsoftware.com/eap-sim/ref/InstallingSIMPack.html#TestingPrerequisites> for more detailed list of the test setup needs.
 
