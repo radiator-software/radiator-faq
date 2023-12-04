@@ -395,6 +395,30 @@ To enable the DEBUG level log of Radiator, do the following:
 2. If the Radiator configuration does not already contain `LogTraceId` and `LogMicroseconds` add those to the configuration also. These are good values to have in the Radiator configuration even when logging level is lower than DEBUG. Good place to add them is right after the `Trace` row. See more from: <https://files.radiatorsoftware.com/radiator/ref/GlobalParameters.html#LogTraceId_common> and <https://files.radiatorsoftware.com/radiator/ref/GlobalParameters.html#LogMicroseconds>.
 3. Restart Radiator so the configuration changes are taken into use. Use `sudo systemctl restart radiator` on Linux environments or restart Radiator service from Services on Windows environments.
 
+### Where can I find Radiator configuration files? {#configuration-location}
+
+Current Radiator installations have their configuration by default in
+
+- **Linux**: File `radiator.conf` in directory `/etc/radiator/`
+- **Windows**: File `radiator.conf` in directory `C:\Program Files\Radiator\`
+
+If your configuration uses `Include` directives, check the main configuration files what files are included (possibly recursively) in the configuration. If you have an older or heavily modified configuration, you may need to find the files (files may have an `.cfg` extension) and directory locations separately. Also, if Radiator is set up to run as systemd instances, the config files for each instance is separated by name, for example instances auth1 and acct1 will have configuration files `radiator-auth1.conf` and `radiator-acct1.conf` accordingly.
+
+### Where can I find Radiator log files {#logfile-location}
+
+Current Radiator installations have log files by default in
+
+- **Linux**: File `radiator.log` in directory `/var/log/radiator`
+- **Windows**: File `radiator.log` in directory `C:\Program Files\Radiator\`
+
+In addition to Radiator process log, there can be multiple other logs depending on your configuration, for example logs for authentication and accounting events. In addition to files, logging can also be sent for example to systemd's journald, syslog mechanism, saved to an external database or fed to a separate log analysing platform (Splunk, etc.).
+
+To find all possible logs, you should check how your Radiator installation is configured. [See above answer](#logfile-location) if you need help finding config files. For file-based logging, configuration parameter `LogDir` defines the default directory for logging, and several different parameters define log files, for example `LogFile` and `AcctLogFileName` (full list is in Radiator [Reference manual](https://files.radiatorsoftware.com/radiator/ref/)). Also, it's good to notice that `LogFile` without a filename disables logging.
+
+Different logs, if used in configuration, can be found by searching for blocks `<Log FILE>`, `<Log SYSLOG>`, `<Log SQL>`.
+
+Log files normally get rotated to avoid filling up storage. Rotation settings are stored in file `/etc/logrotate.d/radiator`. If syslog or some other log shipping agent is used, check their configuration to see where logging 
+
 ### Problems with Oracle database connection? {#oracle-connection-problem}
 
 Radiator log shows error `ERR: Radius::AuthSQL Apollo: SQL connection to 'dbi:Oracle:dbname' failed: timeout` when trying to use Oracle database.
