@@ -248,6 +248,14 @@ For the FailureBackoffTime the default value is 10 minutes, which is a very long
 
 With the NAS devices, all of the above must be also taken into account, so the NAS device has long enough timeout to wait the Radiator response while Radiator waits to connecting to the database and then the database query response. If the Radiator has FailureBackoffTime in effect from all the SQL servers configured on the Radiator configuration for authentication, and there is no fallback configuration on the Radiator that would send REJECT, then no answer is sent to the NAS allowing the NAS to trigger whatever failover configuration it has.
 
+### WiFi offloading and test requirements with EAP-AKA {#configuration-wifioffload}
+When testing for example WiFi offload with EAP-AKA, Radiator add-on modules are required as well as Diameter peering information for Radiator <--> HSS/DRA connection. In practise this requires first installing needed software:
+- Radiator and Radiator Radius::UtilXS <https://files.radiatorsoftware.com/radiator/ref/Installation.html#Installation>
+- Radiator Service Provider Module <https://files.radiatorsoftware.com/carrier/ref/Installing.html#Installing>
+- Radiator SIM Module <https://files.radiatorsoftware.com/eap-sim/ref/InstallingSIMPack.html#InstallingSIMPack>
+
+After the software has been installed, next steps are creating the Radiator configuration and acquiring for example test SIM cards. Check out <https://files.radiatorsoftware.com/eap-sim/ref/InstallingSIMPack.html#TestingPrerequisites> for more detailed list of the test setup needs.
+
 
 ## Deployment {#deployment}
 
