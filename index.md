@@ -56,26 +56,26 @@ Radiator was developed by Australian-based *Open System Consultants (OSC)* 1998-
 
 It's good to create a requirements document describing what you need Radiator to do. The requirements include at least the following information:
 
-#### **1. RADIUS clients**
-- The list of **client devices** that will be sending RADIUS requests to Radiator
-- The associated **device types** for all client devices
+**1. RADIUS clients**
+- The list of **client devices** that will be sending RADIUS requests to Radiator.
+- The associated **device types** for all client devices.
 
-#### **2. Authentication methods**
-- The **authentication** required for your users, together with any **user groups**
+**2. Authentication methods**
+- The **authentication** required for your users, together with any **user groups**.
 - The **authentication method** required for your users and/or groups - ie. LDAP, SQL, etc.
 
-#### **3. Authorisation**
+**3. Authorisation**
 - The **authorisation** required for your users, user groups, or devices. For example, checking if user or device belongs to certain group or is listed on the allow or deny lists.
 - RADIUS **reply attributes**, Change-of-Authorisation (CoA) messages, etc. which need to be sent to the client devices. If vendor-specific RADIUS attributes (VSA) are used, the RADIUS dictionary or detailed information of such attributes.
 - Any **additional functionality** which needs to be done, such as IP address allocation, VLAN assignment, etc.
 
-#### 4. **Accounting and logging**
-- Any **accounting** processing that is needed and where the accounting data should be stored
+4. **Accounting and logging**
+- Any **accounting** processing that is needed and where the accounting data should be stored.
 - What **logging** you require for user authentication, user accounting, server log, etc.
 
-#### **5. Other requirements**
-- Any **special requirements** that can't be met with normal Radiator configuration (ie. hooks, scripting)
-- Any other **integration with external systems**
+**5. Other requirements**
+- Any **special requirements** that can't be met with normal Radiator configuration (ie. hooks, scripting).
+- Any other **integration with external systems**.
 - Expected **amount of requests** or users.
 
 This is a basic list and there are probably other requirements that you are aware of.
