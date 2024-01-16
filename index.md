@@ -69,7 +69,7 @@ It's good to create a requirements document describing what you need Radiator to
 - RADIUS **reply attributes**, Change-of-Authorisation (CoA) messages, etc. which need to be sent to the client devices. If vendor-specific RADIUS attributes (VSA) are used, the RADIUS dictionary or detailed information of such attributes.
 - Any **additional functionality** which needs to be done, such as IP address allocation, VLAN assignment, etc.
 
-4. **Accounting and logging**
+**4. Accounting and logging**
 - Any **accounting** processing that is needed and where the accounting data should be stored.
 - What **logging** you require for user authentication, user accounting, server log, etc.
 
