@@ -313,7 +313,7 @@ Multiple Radiator instances on a single host can be managed either with Ansible 
 
 The Radiator Software Ansible playbooks offer a more automated way to manage Radiator installation, set up, and instance management and they can be either used as is or tailored when needed. See more from our blog: <https://blog.radiatorsoftware.com/2020/10/radiator-software-ansible-playbooks-for.html>
 
-In addition to managing Radiator instances with Ansible, the Radiator instances running on the same host can be managed manually with systemd. We also offer a systemd service file which allows grouping the Radiator instances. Once grouped, all Radiator instances on the host can be controlled with a single systemctl command. Check out instructions for set up and usage from our blog: <https://blog.radiatorsoftware.com/2019/06/grouping-and-controlling-multiple.html>
+In addition to managing Radiator instances with Ansible, the Radiator instances running on the same host can be managed manually with systemd. We also offer a systemd service file which allows grouping the Radiator instances. Once grouped, all Radiator instances on the host can be controlled with a single `systemctl` command. Check out instructions for set up and usage from our blog: <https://blog.radiatorsoftware.com/2019/06/grouping-and-controlling-multiple.html>
 
 ### Can I use Ansible? {#ansible-management}
 
@@ -468,6 +468,24 @@ As the connection is failing with timeout, there are several possibilities where
 6. It is possible to see the traffic between Radiator and the DB with tcpdump and Wireshark. For example:<br>
 `% sudo tcpdump -w oracle.pcap host 172.31.23.114 and tcp port 1525`<br>
 Stop Radiator, start tcpdump in another window and start Radiator, then generate/wait for traffic that tries to use the DB and stop tcpdump. The pcap file should show what, if anything, is exchanged between Radiator and Oracle. If there is no traffic shown on tcpdump it could be that there is a problem with DNS: <https://stackoverflow.com/questions/2364588/very-long-sql-connection-opening-time>
+
+
+### How to speed up RADIUS authentication processing during peak hours {#performance-tips}
+
+Performance of Radiator core functionality is stable and predictable, and with increasing traffic load, most of the bottlenecks often emerge from the performance of the backend services that Radiator is utilising.
+
+More information can be found from our blog article [How to speed up RADIUS authentication processing during peak hours with Radiator](https://blog.radiatorsoftware.com/2024/06/how-to-speed-up-radius-authentication.html), but here's a shortened list to get you started:
+
+- Split configuration it into two separate files, one for authentication and one for accounting, and run Radiator as two separate running instances.
+- Use a proxy instance to forward authentication and/or accounting requests to multiple worker instances.
+- Within instances, use FarmSize to create a farm of server processes to add parallel processing of requests.
+- Incoming requests can be distributed from one or two proxying or load-balancing hosts to multiple hosts for processing.
+- Depending on use case, any combination of FarmSize, multiple instances per host and multiple hosts can be used together to enable more throughput.
+- If the host is running other processes, make sure it has enough resources available for Radiator.
+- If virtualisation platform is used, make sure that it can provide the configured resources to Radiator virtual machines even during the peak hours.
+- Logging to external servers may cause some unneeded delays for Radiator.
+- Running configuration or Radiator may contain some parts that can be optimised.
+- Outside of Radiator, performance of backends may be tuned depending on the backend itself. For example a database can be scaled up or replicated to multiple-server cluster.
 
 
 ## Security {#security}
