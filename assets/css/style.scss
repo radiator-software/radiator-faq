@@ -4,19 +4,33 @@
 @import "minima/skins/{{ site.minima.skin | default: 'classic' }}";
 @import "minima/initialize";
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
 body {
-    font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
     /* color: #383838; */
+    color: #e1e1e1;
+    background-color: #121212;
+    padding-top: 60px;
 }
 
-/* brand colours */
-h1, h2, h3, a {
-    color: #006699;
+header.site-header {
+    background-color: #121212;
+    position: fixed;
+    top: 0;
+}
+
+h1, h2, h3{
+    color: #30a77e !important;
+}
+
+a {
+    color: #ffba21 !important;
 }
 
 .site-title {
-    color: #006699;
+    color: #ffffff !important;
     font-weight: bolder;
 }
 
@@ -58,12 +72,17 @@ h1:after
 }
 */
 
-
 code {
     font-size: 0.9em;
-    border: 1px solid #e8e8e8;
-    border-radius: 2px;
-    background-color: #eeeeff;
+    border: none !important;
+    background-color: #30363d;
+    color: #c9d1d9;
+    padding-block: 0.2em;
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+
+pre.highlight {
+    background-color: #30363d;
 }
 
 .feed-subscribe {
@@ -78,10 +97,11 @@ h3 a:hover, h3 a:active {
 }
 
 #toc-cont {
+    padding-top: 5px;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid #242424;
     font-weight: bolder;
-    background: lightblue;
+    background: #30a77e;
 }
 #toc-cont li {
     list-style: none;
@@ -95,14 +115,25 @@ h3 a:hover, h3 a:active {
     text-indent: -1.5em;
 }
 
+
+#toc-cont li a {
+    color: #ffffff !important;
+}
+#toc-cont li li a {
+    color: #ffffff !important;
+}
+#toc-cont li li a:hover {
+    color: #ffffff !important;
+}
+
 /* move TOC to left side if browser is wide enough */
 @media only screen and (min-width: 1150px) {
     #toc-cont {
         position:fixed;
-        top: 5px;
+        top: 70px;
         left: 10px;
         overflow: auto;
-        height: 98vh;
+        height: 92vh;
         z-index: 1000;
         width: 23em;
     }
