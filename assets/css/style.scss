@@ -12,12 +12,11 @@ body {
     /* color: #383838; */
     color: #e1e1e1;
     background-color: #121212;
-    padding-top: 60px;
 }
 
 header.site-header {
     background-color: #121212;
-    position: fixed;
+    position: sticky;
     top: 0;
 }
 
@@ -159,6 +158,12 @@ h3 a:hover, h3 a:active {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .site-title {
+        font-size: 20px !important;
+        padding: 0;
+    }
+}
 
 /* hide TOC when printing */
 @media print
