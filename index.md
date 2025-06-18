@@ -24,10 +24,6 @@ From our point of view, Radiator AAA Server is the best choice for **RADIUS**, *
 
 Radiator is not open source, but when you purchase Radiator, full source code is always supplied.
 
-### How much does Radiator cost? {#how-much-radiator-cost}
-
-You can see selected Radiator licence prices at <https://radiatorsoftware.com/pricelist/>. Pricing for the Radiator add-on modules is provided upon request by contacting Radiator sales.
-
 ### Who is using Radiator? {#who-is-using-radiator}
 
 Radiator AAA server is used for user and network authentication by a huge range of different organisations: educational institutions, cities, governmental organisations, ISPs and telecom companies, managed service providers, utility companies, and private businesses in various fields such as hospitality, finance, defence and medical industries.
