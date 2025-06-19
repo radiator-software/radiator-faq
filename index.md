@@ -245,7 +245,7 @@ When you install Radiator from a .deb or a .RPM archive, see directory _/opt/rad
 
 Here's an example on Linux of how to set up a basic configuration that uses a text file for user credentials and authorisation settings. On Windows, adjust the paths accordingly.
 
-```sh
+```
 cd /etc/radiator
 sudo cp -a -i radiator.conf radiator.conf.dist
 sudo cp /opt/radiator/radiator/goodies/simple.cfg radiator.conf

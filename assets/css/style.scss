@@ -7,10 +7,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 
+/* Dark mode (default) - current implementation */
 body {
     font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
-    /* color: #383838; */
-    color: #e1e1e1;
+    color: #cccccc;
     background-color: #121212;
 }
 
@@ -18,6 +18,7 @@ header.site-header {
     background-color: #121212;
     position: sticky;
     top: 0;
+    border-top: none;
 }
 
 h1, h2, h3{
@@ -31,6 +32,19 @@ a {
 .site-title {
     color: #ffffff !important;
     font-weight: bolder;
+}
+
+code {
+    font-size: 0.9em;
+    border: none !important;
+    background-color: #30363d;
+    color: #c9d1d9;
+    padding-block: 0.2em;
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+
+pre.highlight {
+    background-color: #30363d;
 }
 
 /* diver lines over headers */
@@ -61,27 +75,6 @@ h3:before {
     box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
     -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
     -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-}
-/*
-h1:after
-{
-    content:' ';
-    display:block;
-    border:2px solid black;
-}
-*/
-
-code {
-    font-size: 0.9em;
-    border: none !important;
-    background-color: #30363d;
-    color: #c9d1d9;
-    padding-block: 0.2em;
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-}
-
-pre.highlight {
-    background-color: #30363d;
 }
 
 .feed-subscribe {
@@ -125,8 +118,57 @@ h3 a:hover, h3 a:active {
     color: #ffffff !important;
 }
 
+/* Light mode - for users who explicitly prefer light themes */
+@media (prefers-color-scheme: light) {
+    body {
+        color: #242424;
+        background-color: #F4F2F3;
+    }
+
+    header.site-header {
+        background-color: #F4F2F3;
+    }
+
+    h1, h2, h3 {
+        color: #30a77e !important;
+    }
+
+    a {
+        color: #30a77e !important;
+    }
+
+    .site-title {
+        color: #242424 !important;
+    }
+
+    h2:before {
+        border: 2px solid #cccccc;
+    }
+
+    h3:before {
+        border: 1px solid #cccccc;
+    }
+
+    code {
+        background-color: #b4b5b7;
+        color: #242424;
+    }
+
+    pre.highlight {
+        background-color: #b4b5b7;
+    }
+
+    #toc-cont li li {
+        color: #ffffff;
+    }
+
+    li.marker {
+        color: #F4F2F3;
+    }
+}
+
 html {
-    scroll-padding-top: 100px;
+    scroll-padding-top: 100px; /* Mobile default */
 }
 
 /* move TOC to left side if browser is wide enough */
@@ -180,6 +222,6 @@ html {
 
 @media only screen and (min-width: 769px) {
     html {
-        scroll-padding-top: 50px;
+        scroll-padding-top: 50px; /* Desktop */
     }
 }
